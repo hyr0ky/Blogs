@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "全栈代码审计/Java/1.基础漏洞/0.Sql注入漏洞.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.Sql注入漏洞"
+              "title": "README"
             }
           }
         ]
@@ -178,22 +178,23 @@
   },
   "active": "5ba857b310d5cd4b",
   "lastOpenFiles": [
+    "网络安全基础/2.渗透测试基础/0.命令速查.md",
+    "区块链安全",
+    "README.md",
+    "网络安全基础/2.渗透测试基础",
+    "网络安全基础/1.Linux基础",
+    "网络安全基础/0.Windows基础",
+    "网络安全基础",
+    "红队",
     "全栈代码审计/Java/1.基础漏洞/0.Sql注入漏洞.md",
     "全栈代码审计/Java/2.CodeQl",
     "全栈代码审计/Java/1.基础漏洞",
-    "未命名",
     "全栈代码审计/Java/0.Java基础",
     "全栈代码审计/Java",
-    "全栈代码审计",
-    "README.md",
-    "新建 文本文档.txt",
     "全栈代码审计/基础漏洞/1.Rce漏洞.md",
-    "全栈代码审计/基础漏洞",
     "全栈代码审计/Python/Cve研究/media/Pasted image 20250411221421.png",
     "全栈代码审计/Python/基础漏洞/1.Rce漏洞.md",
     "全栈代码审计/Python/Cve研究/CVE-2025-3248.md",
-    "全栈代码审计/Python/Cve研究/media",
-    "全栈代码审计/Python/基础漏洞",
     "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501005549.png",
     "全栈代码审计/JAVA/3. 项目实战+复现/1.SQL注入/media/Pasted image 20250501014606.png",
     "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501005446.png",
@@ -221,8 +222,6 @@
     "全栈代码审计/JAVA/2. Java代码审计基础/1.SQL注入.md",
     "全栈代码审计/JAVA/2. Java代码审计基础/0.XSS漏洞.md",
     "全栈代码审计/JAVA/0. 书/0.资源.md",
-    "全栈代码审计/Codeql/0-hero/2-CodeQl启动.md",
-    "全栈代码审计/Codeql/0-hero/1-静态分析基础.md",
-    "全栈代码审计/Codeql/0.资源.md"
+    "全栈代码审计/Codeql/0-hero/2-CodeQl启动.md"
   ]
 }
