@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "555a98482812d0b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b4a3877d7bc0b28",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ba857b310d5cd4b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0ec227d12e13ca38",
+    "type": "split",
+    "children": [
+      {
+        "id": "a669572603019b5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "460a6ac6fb4eeea3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "0b513a936dc4a34a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "74465d71b2860990",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d3292a4c707f7ae5",
+    "type": "split",
+    "children": [
+      {
+        "id": "334a86ec2def4126",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5db1487e4a507dba",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "a6e858af667dc043",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "ad4bd1b1fca4ac71",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "7165415bc3db2ab6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "460a6ac6fb4eeea3",
+  "lastOpenFiles": [
+    "README.md",
+    "新建 文本文档.txt",
+    "全栈代码审计/基础漏洞/1.Rce漏洞.md",
+    "全栈代码审计/基础漏洞",
+    "全栈代码审计/Python/Cve研究/media/Pasted image 20250411221421.png",
+    "全栈代码审计/Python/基础漏洞/1.Rce漏洞.md",
+    "全栈代码审计/Python/Cve研究/CVE-2025-3248.md",
+    "全栈代码审计/Python/Cve研究/media",
+    "全栈代码审计/Python/基础漏洞",
+    "全栈代码审计/Python/Cve研究",
+    "全栈代码审计/Python",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501005549.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/1.SQL注入/media/Pasted image 20250501014606.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501005446.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004803.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004739.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004538.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004052.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501003840.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501003710.png",
+    "全栈代码审计/JAVA/3. 项目实战+复现/1.SQL注入/0.泛微Ecology.md",
+    "全栈代码审计/JAVA/3. 项目实战+复现/1.SQL注入/media",
+    "全栈代码审计/JAVA/3. 项目实战+复现/1.组件代码审计/0.FastJson.md",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/1.TeamCity.md",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media",
+    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/0.资源.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/课件/目录穿越漏洞.pdf",
+    "全栈代码审计/JAVA/2. Java代码审计基础/课件/任意文件上传漏洞.pdf",
+    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/3.SpingBoot 和 SpringCloud.md",
+    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/1.Jsp基础.md",
+    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/2.Spring 和 SpringMVC.md",
+    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/0.Servlet、过滤器、监听器和拦截器.md",
+    "全栈代码审计/JAVA/4. CodeQL/1.CodeQL语法.md",
+    "全栈代码审计/JAVA/4. CodeQL/0.Codeql启动.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/4.SSRF+CSRF.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/6.业务逻辑漏洞.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/5.XXE漏洞.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/3.命令执行+代码执行.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/2.文件操作+目录遍历.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/1.SQL注入.md",
+    "全栈代码审计/JAVA/2. Java代码审计基础/0.XSS漏洞.md",
+    "全栈代码审计/JAVA/0. 书/0.资源.md",
+    "全栈代码审计/Codeql/0-hero/2-CodeQl启动.md",
+    "全栈代码审计/Codeql/0-hero/1-静态分析基础.md",
+    "全栈代码审计/Codeql/0.资源.md",
+    "全栈代码审计/AI代码审计系统/0.0--dev版本/3.接入大模型.md"
+  ]
+}
