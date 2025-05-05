@@ -177,8 +177,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "881acb3e561cb818",
+  "active": "5ba857b310d5cd4b",
   "lastOpenFiles": [
+    "全栈代码审计/1.大纲.md",
+    "全栈代码审计/Java/1.基础漏洞/2.身份验证绕过.md",
+    "全栈代码审计/Java/1.基础漏洞/4..md",
+    "全栈代码审计/Java/1.基础漏洞/3.SSTI.md",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/0.Servlet、过滤器、监听器和拦截器.md",
     "全栈代码审计/Java/1.基础漏洞/0.Sql注入漏洞.md",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250126105403.png",
@@ -192,11 +196,9 @@
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250118182345.png",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250118182259.png",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media",
-    "全栈代码审计/Java/1.基础漏洞/2.身份验证绕过.md",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础",
     "全栈代码审计/Java/2.CodeQl/0.Java类比学习Codeql基础语法.md",
     "全栈代码审计/Java/0.Java基础/1.Java-EE.md",
-    "全栈代码审计/1.大纲.md",
     "区块链安全/资源整理/如何成为智能合约审计员和漏洞赏金猎人.md",
     "区块链安全/资源整理/区块链推特学习路线.md",
     "区块链安全/资源整理/media",
@@ -213,7 +215,6 @@
     "区块链安全/0.基础知识",
     "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
     "全栈代码审计/Java/4.项目审计/未命名",
-    "全栈代码审计/Java/1.基础漏洞/未命名.md",
     "网络安全基础/2.渗透测试基础/0.命令速查.md",
     "README.md",
     "网络安全基础/2.渗透测试基础/5.提权.md",
