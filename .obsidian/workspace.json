@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -177,12 +176,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "881acb3e561cb818",
+  "active": "5ba857b310d5cd4b",
   "lastOpenFiles": [
+    "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
+    "全栈代码审计/1.大纲.md",
+    "全栈代码审计/Java/1.基础漏洞/0.Sql注入漏洞.md",
     "全栈代码审计/Java/1.基础漏洞/media/Pasted image 20250505161648.png",
     "全栈代码审计/Java/1.基础漏洞/media",
     "网络安全基础/2.渗透测试基础/0.命令速查.md",
-    "全栈代码审计/Java/1.基础漏洞/0.Sql注入漏洞.md",
     "README.md",
     "网络安全基础/2.渗透测试基础/5.提权.md",
     "网络安全基础/2.渗透测试基础/7.常用服务攻击命令速查.md",
@@ -213,7 +214,6 @@
     "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004538.png",
     "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004052.png",
     "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501003840.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501003710.png",
     "全栈代码审计/JAVA/3. 项目实战+复现/1.SQL注入/0.泛微Ecology.md",
     "全栈代码审计/JAVA/3. 项目实战+复现/1.组件代码审计/0.FastJson.md",
     "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/1.TeamCity.md",
@@ -223,7 +223,6 @@
     "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/2.Spring 和 SpringMVC.md",
     "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/0.Servlet、过滤器、监听器和拦截器.md",
     "全栈代码审计/JAVA/4. CodeQL/1.CodeQL语法.md",
-    "全栈代码审计/JAVA/4. CodeQL/0.Codeql启动.md",
-    "全栈代码审计/JAVA/2. Java代码审计基础/4.SSRF+CSRF.md"
+    "全栈代码审计/JAVA/4. CodeQL/0.Codeql启动.md"
   ]
 }
