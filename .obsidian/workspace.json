@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "全栈代码审计/Java/1.基础漏洞/0.Sql注入漏洞.md",
+                "file": "全栈代码审计/Java/1.基础漏洞/2.身份验证绕过.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.Sql注入漏洞"
+              "title": "2.身份验证绕过"
             }
           }
         ]
@@ -140,12 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "全栈代码审计/Java/1.基础漏洞/2.身份验证绕过.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "2.身份验证绕过 的大纲"
             }
           },
           {
@@ -176,13 +177,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5ba857b310d5cd4b",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
+    "区块链安全/资源整理/media/Pasted image 20241005144430.png",
+    "区块链安全/资源整理/如何成为智能合约审计员和漏洞赏金猎人.md",
+    "区块链安全/资源整理/区块链推特学习路线.md",
+    "区块链安全/资源整理/media",
+    "区块链安全/资源整理/Github资源.md",
+    "区块链安全/资源整理",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122173206.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122172717.png",
+    "区块链安全/1,智能合约安全/media/solidity-prerequisites1.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122174639.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122184108.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122174418.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122173254.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122172759.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122171615.png",
+    "区块链安全/1,智能合约安全/media/Pasted image 20250122171632.png",
+    "区块链安全/1,智能合约安全/media",
+    "区块链安全/1,智能合约安全/0.基础知识.md",
+    "区块链安全/1,智能合约安全",
+    "区块链安全/0.基础知识/作业/0.复盘.md",
+    "区块链安全/0.基础知识/作业",
+    "区块链安全/0.基础知识/media",
+    "区块链安全/0.基础知识/1.Solidity.md",
+    "区块链安全/0.基础知识/0.BlockChain_basics.md",
+    "区块链安全/0.基础知识",
+    "全栈代码审计/Java/2.CodeQl/0.Java类比学习Codeql基础语法.md",
     "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
-    "全栈代码审计/1.大纲.md",
     "全栈代码审计/Java/1.基础漏洞/0.Sql注入漏洞.md",
-    "全栈代码审计/Java/1.基础漏洞/media/Pasted image 20250505161648.png",
-    "全栈代码审计/Java/1.基础漏洞/media",
+    "全栈代码审计/1.大纲.md",
+    "全栈代码审计/Java/1.基础漏洞/2.身份验证绕过.md",
+    "全栈代码审计/Java/4.项目审计/未命名",
+    "全栈代码审计/Java/4.项目审计",
+    "全栈代码审计/Java/3.Tricks",
+    "全栈代码审计/Java/1.基础漏洞/未命名.md",
     "网络安全基础/2.渗透测试基础/0.命令速查.md",
     "README.md",
     "网络安全基础/2.渗透测试基础/5.提权.md",
@@ -193,36 +223,7 @@
     "网络安全基础/2.渗透测试基础/2.Web枚举.md",
     "网络安全基础/2.渗透测试基础/1.渗透测试基础.md",
     "网络安全基础/3.常用服务攻击命令速查/0.攻击FTP.md",
-    "网络安全基础/4.密码攻击命令速查",
-    "网络安全基础/3.常用服务攻击命令速查",
-    "区块链安全",
-    "网络安全基础/2.渗透测试基础",
-    "网络安全基础/1.Linux基础",
-    "网络安全基础/0.Windows基础",
-    "网络安全基础",
-    "红队",
-    "全栈代码审计/Java/2.CodeQl",
     "全栈代码审计/基础漏洞/1.Rce漏洞.md",
-    "全栈代码审计/Python/Cve研究/media/Pasted image 20250411221421.png",
-    "全栈代码审计/Python/基础漏洞/1.Rce漏洞.md",
-    "全栈代码审计/Python/Cve研究/CVE-2025-3248.md",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501005549.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/1.SQL注入/media/Pasted image 20250501014606.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501005446.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004803.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004739.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004538.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501004052.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/media/Pasted image 20250501003840.png",
-    "全栈代码审计/JAVA/3. 项目实战+复现/1.SQL注入/0.泛微Ecology.md",
-    "全栈代码审计/JAVA/3. 项目实战+复现/1.组件代码审计/0.FastJson.md",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/1.TeamCity.md",
-    "全栈代码审计/JAVA/3. 项目实战+复现/0.登录口绕过/0.资源.md",
-    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/3.SpingBoot 和 SpringCloud.md",
-    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/1.Jsp基础.md",
-    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/2.Spring 和 SpringMVC.md",
-    "全栈代码审计/JAVA/1. Java基础/2.JavaWeb基础/0.Servlet、过滤器、监听器和拦截器.md",
-    "全栈代码审计/JAVA/4. CodeQL/1.CodeQL语法.md",
-    "全栈代码审计/JAVA/4. CodeQL/0.Codeql启动.md"
+    "全栈代码审计/Python/基础漏洞/1.Rce漏洞.md"
   ]
 }
