@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "全栈代码审计/Java/1.基础漏洞/2.鉴权绕过.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.鉴权绕过"
+              "title": "README"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.RCE 的大纲"
+              "title": "README 的大纲"
             }
           },
           {
@@ -164,7 +164,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5
+    "width": 315.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,28 +177,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "460a6ac6fb4eeea3",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
+    "靶机/HTB/0.Timelapse.md",
+    "靶机/HTB/media/Pasted image 20250506221753.png",
+    "靶机/HTB/media/Pasted image 20250506221310.png",
+    "靶机/HTB/media/Pasted image 20250506220614.png",
+    "靶机/HTB/media/Pasted image 20250506215902.png",
+    "靶机/HTB/media/Pasted image 20250506215502.png",
+    "靶机/HTB/media/Pasted image 20250506213620.png",
+    "靶机/HTB/media/Pasted image 20250506213352.png",
+    "靶机/HTB/media/Pasted image 20250506204549.png",
+    "靶机/HTB/media/Pasted image 20250506173849.png",
+    "靶机/HTB/media/Pasted image 20250506173330.png",
+    "靶机/HTB/media",
+    "全栈代码审计/Java/1.基础漏洞/2.鉴权绕过.md",
+    "靶机/未命名.md",
+    "靶机/HTB",
     "靶机",
     "全栈代码审计/Java/4.项目审计/0.TeamCity/未命名.md",
     "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
     "全栈代码审计/Java/1.基础漏洞/0.Sql注入.md",
-    "全栈代码审计/Java/1.基础漏洞/2.鉴权绕过.md",
     "全栈代码审计/Java/4.项目审计/0.TeamCity",
     "全栈代码审计/Java/1.基础漏洞/3.SSTI.md",
     "全栈代码审计/Java/1.基础漏洞/4..md",
     "全栈代码审计/1.大纲.md",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/0.Servlet、过滤器、监听器和拦截器.md",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250126105403.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250126104415.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250126103933.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250126103628.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250126100558.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250126100230.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250118183520.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250118183509.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250118182345.png",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media/Pasted image 20250118182259.png",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础",
     "全栈代码审计/Java/2.CodeQl/0.Java类比学习Codeql基础语法.md",
@@ -212,18 +216,13 @@
     "区块链安全/1,智能合约安全/0.基础知识.md",
     "区块链安全/1,智能合约安全",
     "区块链安全/0.基础知识/作业/0.复盘.md",
-    "区块链安全/0.基础知识/作业",
-    "区块链安全/0.基础知识/media",
     "区块链安全/0.基础知识/1.Solidity.md",
     "区块链安全/0.基础知识/0.BlockChain_basics.md",
-    "区块链安全/0.基础知识",
     "网络安全基础/2.渗透测试基础/0.命令速查.md",
     "README.md",
     "网络安全基础/2.渗透测试基础/5.提权.md",
     "网络安全基础/2.渗透测试基础/7.常用服务攻击命令速查.md",
     "网络安全基础/2.渗透测试基础/6.文件传输.md",
-    "网络安全基础/2.渗透测试基础/4.Shell利用.md",
-    "网络安全基础/2.渗透测试基础/3.公开利用.md",
-    "网络安全基础/2.渗透测试基础/2.Web枚举.md"
+    "网络安全基础/2.渗透测试基础/4.Shell利用.md"
   ]
 }
