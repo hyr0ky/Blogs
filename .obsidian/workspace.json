@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "红队/资源.md",
+                "file": "全栈代码审计/Java/2.CodeQl/1.环境构建.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "资源"
+              "title": "1.环境构建"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "红队/资源.md",
+                "file": "全栈代码审计/Java/2.CodeQl/1.环境构建.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "资源 的大纲"
+              "title": "1.环境构建 的大纲"
             }
           },
           {
@@ -179,51 +179,51 @@
   },
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "全栈代码审计/Java/1.基础漏洞/0.Sql注入.md",
-    "红队/资源.md",
-    "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
-    "全栈代码审计/Java/1.基础漏洞/media/Pasted image 20250508201758.png",
-    "全栈代码审计/Java/1.基础漏洞/media/Pasted image 20250508200809.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512175957.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512175939.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512175118.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512175003.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512164847.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512163912.png",
+    "全栈代码审计/Java/2.CodeQl/2.CodeQl.md",
+    "全栈代码审计/Java/2.CodeQl/1.环境构建.md",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512161257.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512161158.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512161134.png",
     "全栈代码审计/Java/1.基础漏洞/3.SSTI.md",
+    "全栈代码审计/Java/1.基础漏洞/4.第三方组件.md",
     "全栈代码审计/Java/1.基础漏洞/2.鉴权绕过.md",
-    "全栈代码审计/Java/1.基础漏洞/media/Pasted image 20250508194346.png",
-    "全栈代码审计/Java/1.基础漏洞/media/Pasted image 20250508194022.png",
-    "全栈代码审计/Java/1.基础漏洞/media/Pasted image 20250508194008.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512151618.png",
+    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250511190302.png",
+    "全栈代码审计/Java/2.CodeQl/3.CodeQL语法.md",
+    "区块链安全/1,智能合约安全/靶场/Ethernaut靶场/01--Fallback.md",
+    "区块链安全/1,智能合约安全/0.基础知识.md",
+    "区块链安全/1,智能合约安全/靶场",
+    "区块链安全/1,智能合约安全/靶场/Ethernaut靶场",
+    "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
+    "全栈代码审计/Java/1.基础漏洞/0.Sql注入.md",
+    "全栈代码审计/Java/1.基础漏洞/未命名.md",
+    "全栈代码审计/Java/2.CodeQl/media",
+    "全栈代码审计/Java/2.CodeQl/img",
+    "全栈代码审计/Java/2.CodeQl/0.Java类比学习Codeql基础语法.md",
+    "全栈代码审计/Java/1.基础漏洞/第 32 课 Fastjson 漏洞代码审计方法.md",
+    "全栈代码审计/1.大纲.md",
+    "红队/资源.md",
     "区块链安全/Blockchain.zip",
     "README.md",
     "1.大纲.pdf",
     "靶机/HTB/0.Timelapse.md",
-    "靶机/HTB/media/Pasted image 20250506221753.png",
-    "靶机/HTB/media/Pasted image 20250506221310.png",
-    "靶机/HTB/media/Pasted image 20250506220614.png",
-    "靶机/HTB/media/Pasted image 20250506215902.png",
-    "靶机/HTB/media/Pasted image 20250506215502.png",
     "靶机/HTB/media",
     "靶机/未命名.md",
     "靶机/HTB",
     "靶机",
     "全栈代码审计/Java/4.项目审计/0.TeamCity/未命名.md",
     "全栈代码审计/Java/4.项目审计/0.TeamCity",
-    "全栈代码审计/Java/1.基础漏洞/4..md",
-    "全栈代码审计/1.大纲.md",
     "全栈代码审计/Java/0.Java基础/1.Java-Web基础/0.Servlet、过滤器、监听器和拦截器.md",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/media",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础",
-    "全栈代码审计/Java/2.CodeQl/0.Java类比学习Codeql基础语法.md",
     "全栈代码审计/Java/0.Java基础/1.Java-EE.md",
     "区块链安全/资源整理/如何成为智能合约审计员和漏洞赏金猎人.md",
     "区块链安全/资源整理/区块链推特学习路线.md",
-    "区块链安全/资源整理/media",
     "区块链安全/资源整理/Github资源.md",
-    "区块链安全/资源整理",
-    "区块链安全/1,智能合约安全/0.基础知识.md",
-    "区块链安全/0.基础知识/作业/0.复盘.md",
-    "区块链安全/0.基础知识/1.Solidity.md",
-    "区块链安全/0.基础知识/0.BlockChain_basics.md",
-    "网络安全基础/2.渗透测试基础/0.命令速查.md",
-    "网络安全基础/2.渗透测试基础/5.提权.md",
-    "网络安全基础/2.渗透测试基础/7.常用服务攻击命令速查.md",
-    "网络安全基础/2.渗透测试基础/6.文件传输.md",
-    "网络安全基础/2.渗透测试基础/4.Shell利用.md"
+    "区块链安全/0.基础知识/作业/0.复盘.md"
   ]
 }
