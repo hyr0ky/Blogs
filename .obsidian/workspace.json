@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "全栈代码审计/Java/2.CodeQl/3.Codeql寻找JavaSec漏洞.md",
+                "file": "区块链安全/0.基础知识/0.BlockChain_basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.Codeql寻找JavaSec漏洞"
+              "title": "0.BlockChain_basics"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "全栈代码审计/Java/2.CodeQl/3.Codeql寻找JavaSec漏洞.md",
+                "file": "区块链安全/0.基础知识/0.BlockChain_basics.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.Codeql寻找JavaSec漏洞 的大纲"
+              "title": "0.BlockChain_basics 的大纲"
             }
           },
           {
@@ -179,13 +179,32 @@
   },
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
+    "区块链安全/0.基础知识/1.Solidity.md",
+    "区块链安全/1,智能合约安全/靶场/ethernaut/0.Hello Ethernaut.md",
+    "区块链安全/1,智能合约安全/靶场/ethernaut/13..md",
+    "区块链安全/1,智能合约安全/靶场/ethernaut/media/Pasted image 20250515222755.png",
+    "区块链安全/1,智能合约安全/靶场/ethernaut/media",
+    "区块链安全/1,智能合约安全/靶场/ethernaut/12..md",
+    "区块链安全/1,智能合约安全/靶场/ethernaut/1.FallBack.md",
+    "区块链安全/0.基础知识/2.Foundry.md",
+    "区块链安全/0.基础知识/0.BlockChain_basics.md",
+    "区块链安全/1,智能合约安全/靶场/ethernaut/2..md",
+    "区块链安全/1,智能合约安全/0.基础知识.md",
+    "区块链安全/资源整理/Github资源.md",
+    "区块链安全/资源整理/media/Pasted image 20250515214535.png",
+    "区块链安全/资源整理/如何成为智能合约审计员和漏洞赏金猎人.md",
+    "区块链安全/资源整理/区块链推特学习路线.md",
+    "全栈代码审计/Java/2.CodeQl/2.CodeQl语法.md",
+    "区块链安全/1,智能合约安全/靶场/ethernaut",
+    "区块链安全/1,智能合约安全/靶场/Ethernaut靶场/01--Fallback.md",
+    "全栈代码审计/Java/2.CodeQl/3.Codeql寻找JavaSec漏洞.md",
+    "全栈代码审计/Java/2.CodeQl/1.环境构建.md",
+    "全栈代码审计/Java/4.项目审计/1.Tmall/1.Codeql.md",
+    "全栈代码审计/Java/4.项目审计/1.Tmall",
     "全栈代码审计/Java/2.CodeQl/4.从官方QL规则到实战.md",
     "全栈代码审计/Java/1.基础漏洞/1.RCE.md",
-    "全栈代码审计/Java/2.CodeQl/3.Codeql寻找JavaSec漏洞.md",
-    "全栈代码审计/Java/2.CodeQl/2.CodeQl语法.md",
     "全栈代码审计/Java/1.基础漏洞/3.SSTI.md",
     "全栈代码审计/Java/1.基础漏洞/4.第三方组件.md",
-    "全栈代码审计/Java/2.CodeQl/1.环境构建.md",
     "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250513011609.png",
     "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512211005.png",
     "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512205720.png",
@@ -194,36 +213,16 @@
     "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512201112.png",
     "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512200840.png",
     "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512200439.png",
-    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512200259.png",
-    "全栈代码审计/Java/2.CodeQl/media/Pasted image 20250512200011.png",
     "全栈代码审计/Java/1.基础漏洞/2.鉴权绕过.md",
     "全栈代码审计/Java/2.CodeQl/3.CodeQL语法.md",
-    "区块链安全/1,智能合约安全/靶场/Ethernaut靶场/01--Fallback.md",
-    "区块链安全/1,智能合约安全/0.基础知识.md",
     "区块链安全/1,智能合约安全/靶场",
     "区块链安全/1,智能合约安全/靶场/Ethernaut靶场",
     "全栈代码审计/Java/1.基础漏洞/0.Sql注入.md",
     "全栈代码审计/Java/1.基础漏洞/未命名.md",
     "全栈代码审计/Java/2.CodeQl/media",
     "全栈代码审计/Java/2.CodeQl/img",
-    "全栈代码审计/Java/2.CodeQl/0.Java类比学习Codeql基础语法.md",
-    "全栈代码审计/Java/1.基础漏洞/第 32 课 Fastjson 漏洞代码审计方法.md",
-    "全栈代码审计/1.大纲.md",
-    "红队/资源.md",
     "区块链安全/Blockchain.zip",
-    "README.md",
     "1.大纲.pdf",
-    "靶机/HTB/0.Timelapse.md",
-    "靶机/HTB/media",
-    "靶机/未命名.md",
-    "靶机/HTB",
-    "靶机",
-    "全栈代码审计/Java/4.项目审计/0.TeamCity/未命名.md",
-    "全栈代码审计/Java/4.项目审计/0.TeamCity",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/0.Servlet、过滤器、监听器和拦截器.md",
-    "全栈代码审计/Java/0.Java基础/1.Java-EE.md",
-    "区块链安全/资源整理/如何成为智能合约审计员和漏洞赏金猎人.md",
-    "区块链安全/资源整理/区块链推特学习路线.md",
-    "区块链安全/资源整理/Github资源.md"
+    "靶机/HTB/media"
   ]
 }
