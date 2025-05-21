@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "红队/0.信息收集/1.被动信息收集.md",
+                "file": "红队/9.漏洞/资源.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.被动信息收集"
+              "title": "资源"
             }
           }
         ]
@@ -178,17 +178,20 @@
   },
   "active": "c8e44d473ef8cd6d",
   "lastOpenFiles": [
+    "红队/9.漏洞/腾讯.md",
+    "红队/9.漏洞/资源.md",
+    "红队/0.信息收集/1.被动信息收集.md",
+    "红队/0.信息收集/media/Pasted image 20250521112859.png",
+    "红队/0.信息收集/media/Pasted image 20250521112035.png",
+    "红队/0.信息收集/media/Pasted image 20250521111747.png",
     "红队/0.信息收集/media/Pasted image 20250521105622.png",
     "红队/0.信息收集/media/Pasted image 20250521105447.png",
     "红队/0.信息收集/media/Pasted image 20250521104714.png",
     "红队/0.信息收集/2.主动信息收集.md",
     "红队/0.信息收集/media/Pasted image 20250521101340.png",
     "红队/0.信息收集/3.CDN绕过.md",
-    "红队/0.信息收集/1.被动信息收集.md",
     "红队/0.信息收集/0.RedTeam的艺术.md",
     "红队/0.信息收集/POC编写 - woodpecker插件编写.md",
-    "红队/9.漏洞/资源.md",
-    "红队/9.漏洞/腾讯.md",
     "红队/9.漏洞",
     "红队/8.靶场/HTP-Prov.md",
     "红队/8.靶场",
@@ -213,10 +216,6 @@
     "红队/5.提权/数据库提权",
     "红队/5.提权/系统提权",
     "红队/5.提权",
-    "红队/4.权限维持/Linux/media/Pasted image 20240810192354.png",
-    "红队/4.权限维持/Linux/media/Pasted image 20240810192331.png",
-    "红队/4.权限维持/Linux/media/Pasted image 20240810192312.png",
-    "红队/4.权限维持/Windows/media/Pasted image 20250417190717.png",
     "红队/4.权限维持/Linux/[总结]Linux权限维持_-_肖洋肖恩、_-_博客园.md",
     "红队/4.权限维持/Linux/media",
     "红队/4.权限维持/Linux/[总结]Linux_权限维持.md",
