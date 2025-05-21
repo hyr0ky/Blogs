@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8b4a3877d7bc0b28",
+        "id": "a5ba801ab7f3d554",
         "type": "tabs",
         "children": [
           {
-            "id": "5ba857b310d5cd4b",
+            "id": "c8e44d473ef8cd6d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "区块链安全/2.案例/MBUToken漏洞分析.md",
+                "file": "红队/0.信息收集/1.被动信息收集.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MBUToken漏洞分析"
+              "title": "1.被动信息收集"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"全栈代码审计/Java/1.基础漏洞/6.反序列化/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -140,13 +140,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "区块链安全/2.案例/MBUToken漏洞分析.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MBUToken漏洞分析 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -177,53 +176,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "881acb3e561cb818",
+  "active": "c8e44d473ef8cd6d",
   "lastOpenFiles": [
-    "区块链安全/2.案例/media/Pasted image 20250520235713.png",
-    "区块链安全/2.案例/media/d00e86a446d17032cf5ff183c81c0a0.png",
-    "区块链安全/2.案例/media/db394deda04f576a1396abc5ca8638f.png",
-    "区块链安全/2.案例/media/Pasted image 20250520235206.png",
-    "区块链安全/2.案例/media/c34a67271f1a9b87f94d3f6e8e0489f.png",
-    "区块链安全/2.案例/media/Pasted image 20250520234921.png",
-    "区块链安全/2.案例/media/Pasted image 20250520234834.png",
-    "区块链安全/2.案例/media/Pasted image 20250520234740.png",
-    "区块链安全/2.案例/media/Pasted image 20250520233736.png",
-    "区块链安全/2.案例/media/Pasted image 20250520233643.png",
-    "区块链安全/2.案例/media/Pasted image 20250520215840.png",
-    "区块链安全/2.案例/media",
-    "全栈代码审计/Java/1.基础漏洞/5.文件上传&文件读取.md",
-    "区块链安全/2.案例/MBUToken漏洞分析.md",
-    "区块链安全/2.案例",
-    "靶机/HTB/0.Timelapse.md",
-    "红队/Nmap.md",
-    "红队/资源.md",
-    "全栈代码审计/Java/1.基础漏洞/0.Sql注入.md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut/2.Fallout.md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut/0.Hello Ethernaut.md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut/1.FallBack.md",
-    "全栈代码审计/Java/0.Java基础/1.Java-Web基础/0.Servlet、过滤器、监听器和拦截器.md",
-    "全栈代码审计/Java/2.CodeQl/2.CodeQl语法.md",
-    "全栈代码审计/Java/2.CodeQl/3.Codeql寻找JavaSec漏洞.md",
-    "全栈代码审计/Java/2.CodeQl/1.环境构建.md",
-    "区块链安全/1,智能合约安全/0.基础知识.md",
-    "区块链安全/0.基础知识/1.Solidity.md",
-    "区块链安全/0.基础知识/2.Foundry.md",
-    "区块链安全/0.基础知识/2.Foundry.md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut/3..md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut/12..md",
-    "区块链安全/0.基础知识/0.BlockChain_basics.md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut/13..md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut/media",
-    "区块链安全/资源整理/Github资源.md",
-    "区块链安全/资源整理/如何成为智能合约审计员和漏洞赏金猎人.md",
-    "区块链安全/资源整理/区块链推特学习路线.md",
-    "区块链安全/1,智能合约安全/靶场/ethernaut",
-    "区块链安全/1,智能合约安全/靶场/Ethernaut靶场/01--Fallback.md",
-    "全栈代码审计/Java/4.项目审计/1.Tmall",
-    "区块链安全/1,智能合约安全/靶场",
-    "区块链安全/1,智能合约安全/靶场/Ethernaut靶场",
-    "全栈代码审计/Java/2.CodeQl/media",
-    "全栈代码审计/Java/2.CodeQl/img",
-    "区块链安全/Blockchain.zip"
+    "红队/0.信息收集/media/Pasted image 20250521105622.png",
+    "红队/0.信息收集/media/Pasted image 20250521105447.png",
+    "红队/0.信息收集/media/Pasted image 20250521104714.png",
+    "红队/0.信息收集/2.主动信息收集.md",
+    "红队/0.信息收集/media/Pasted image 20250521101340.png",
+    "红队/0.信息收集/3.CDN绕过.md",
+    "红队/0.信息收集/1.被动信息收集.md",
+    "红队/0.信息收集/0.RedTeam的艺术.md",
+    "红队/0.信息收集/POC编写 - woodpecker插件编写.md",
+    "红队/9.漏洞/资源.md",
+    "红队/9.漏洞/腾讯.md",
+    "红队/9.漏洞",
+    "红队/8.靶场/HTP-Prov.md",
+    "红队/8.靶场",
+    "红队/7.免杀/4.非PE结构的免杀.md",
+    "红队/7.免杀/1.shellcode基础.md",
+    "红队/7.免杀/3.人工层面的免杀.md",
+    "红队/7.免杀/2.代码上的免杀.md",
+    "红队/7.免杀/0.代码基础.md",
+    "红队/7.免杀",
+    "红队/6.反溯源/media/Pasted image 20250501030137.png",
+    "红队/6.反溯源/media/Pasted image 20250501030509.png",
+    "红队/6.反溯源/media/Pasted image 20250428211210.png",
+    "红队/6.反溯源/1.溯源.md",
+    "红队/6.反溯源/红队反溯源.md",
+    "红队/6.反溯源/未命名.md",
+    "红队/6.反溯源/media",
+    "红队/6.反溯源/0.云函数和域前置.md",
+    "红队/6.反溯源",
+    "红队/5.提权/系统提权/linux/SUID.md",
+    "红队/5.提权/数据库提权/SQL_Server_提权.md",
+    "红队/5.提权/系统提权/linux",
+    "红队/5.提权/数据库提权",
+    "红队/5.提权/系统提权",
+    "红队/5.提权",
+    "红队/4.权限维持/Linux/media/Pasted image 20240810192354.png",
+    "红队/4.权限维持/Linux/media/Pasted image 20240810192331.png",
+    "红队/4.权限维持/Linux/media/Pasted image 20240810192312.png",
+    "红队/4.权限维持/Windows/media/Pasted image 20250417190717.png",
+    "红队/4.权限维持/Linux/[总结]Linux权限维持_-_肖洋肖恩、_-_博客园.md",
+    "红队/4.权限维持/Linux/media",
+    "红队/4.权限维持/Linux/[总结]Linux_权限维持.md",
+    "红队/4.权限维持/Linux/Linux权限维持 --ms08067.md",
+    "红队/4.权限维持/Windows/[总结]Windows权限维持_-_肖洋肖恩、_-_博客园.md",
+    "红队/4.权限维持/Windows/[总结]Windows_权限维持.md",
+    "红队/4.权限维持/Windows/Windows权限结构与原理.md"
   ]
 }
