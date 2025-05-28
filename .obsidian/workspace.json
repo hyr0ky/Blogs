@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SRC/IDOR/0.IDOR.md",
+                "file": "SRC/4.IDOR/0.IDOR.md",
                 "mode": "source",
                 "source": false
               },
@@ -177,7 +177,7 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "c8e44d473ef8cd6d",
+  "active": "460a6ac6fb4eeea3",
   "lastOpenFiles": [
     "SRC/2.登录界面/3.重置密码.md",
     "SRC/2.登录界面/4.IP验证绕过.md",
@@ -202,20 +202,20 @@
     "SRC/2.登录界面/media/Pasted image 20250529031228.png",
     "SRC/2.登录界面/media",
     "区块链安全/2.案例/Corkprotocol --1200 万美元.md",
-    "SRC/IDOR/media",
-    "SRC/IDOR/0.IDOR.md",
+    "SRC/4.IDOR/media",
+    "SRC/4.IDOR/0.IDOR.md",
     "SRC/1.Recon/信息收集.md",
     "SRC/0.前置基础/media",
     "SRC/0.前置基础/3.DNS Status Codes.md",
-    "SRC/1.SSRF/0.基础.md",
+    "SRC/5.SSRF/0.基础.md",
     "SRC/0.前置基础/2.DNS.md",
     "SRC/0.前置基础/1.IP_address.md",
     "SRC/0.前置基础/0.Internet.md",
     "SRC/资源.md",
-    "SRC/IDOR",
+    "SRC/4.IDOR",
     "SRC/1.Recon",
     "SRC/2.登录界面",
-    "SRC/1.SSRF",
+    "SRC/5.SSRF",
     "SRC/0.前置基础",
     "SRC",
     "A神的课/2.登录界面/0.弱口令.md",
