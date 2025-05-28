@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SRC/3.CSRF/1.学习.md",
+                "file": "SRC/IDOR/0.IDOR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.学习"
+              "title": "0.IDOR"
             }
           }
         ]
@@ -177,16 +177,16 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "460a6ac6fb4eeea3",
+  "active": "c8e44d473ef8cd6d",
   "lastOpenFiles": [
-    "SRC/3.CSRF/0.报告.md",
+    "SRC/2.登录界面/3.重置密码.md",
+    "SRC/2.登录界面/4.IP验证绕过.md",
+    "SRC/2.登录界面/2.OTP爆破.md",
+    "SRC/2.登录界面/1.寻找注册功能.md",
     "SRC/3.CSRF/1.学习.md",
+    "SRC/3.CSRF/0.报告.md",
     "SRC/2.登录界面/0.弱口令.md",
     "SRC/3.CSRF",
-    "SRC/2.登录界面/1.寻找注册功能.md",
-    "SRC/2.登录界面/3.重置密码.md",
-    "SRC/2.登录界面/2.OTP爆破.md",
-    "SRC/2.登录界面/4.IP验证绕过.md",
     "SRC/2.登录界面/5.SSO.md",
     "SRC/2.登录界面/6.未知重定向.md",
     "SRC/2.登录界面/7.Mass Assignment.md",
