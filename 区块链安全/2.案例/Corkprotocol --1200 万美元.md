@@ -1,7 +1,7 @@
 >Corkprotocol 遭受攻击，损失 3,762 wstETH（价值约 1200 万美元）。
 ![](media/Pasted%20image%2020250528222543.png)  
 
-- 分析： https://x.com/hklst4r/status/1927743793325121665
+- 分析： https://x.com/hklst4r/status/1927755386557255717
 - https://app.blocksec.com/explorer/tx/eth/0xfd89cdd0be468a564dd525b222b728386d7c6780cf7b2f90d2b54493be09f64d
 - 推特： https://x.com/officer_cia/status/1927709439190020443
 - 攻击者地址：0xEA6f30e360192bae715599E15e2F765B49E4da98 ![](media/Pasted%20image%2020250528222426.png)  
@@ -20,6 +20,6 @@
 
 
 ## S7iter 
-
+- https://x.com/hklst4r/status/1927743793325121665
 LP  --  两种币相互兑换
 ![](media/Pasted%20image%2020250528231815.png)  
