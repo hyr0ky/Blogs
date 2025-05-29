@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SRC/4.IDOR/0.IDOR.md",
+                "file": "SRC/10.工具/Burp+Rad+Xscan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.IDOR"
+              "title": "Burp+Rad+Xscan"
             }
           }
         ]
@@ -177,8 +177,26 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "460a6ac6fb4eeea3",
+  "active": "c8e44d473ef8cd6d",
   "lastOpenFiles": [
+    "SRC/10.工具/media/Pasted image 20250529144955.png",
+    "SRC/10.工具/media/Pasted image 20250529144737.png",
+    "SRC/10.工具/media/Pasted image 20250529144659.png",
+    "SRC/10.工具/media/Pasted image 20250529144622.png",
+    "SRC/10.工具/media",
+    "考研/各院往年平均分.md",
+    "SRC/10.工具/Burp+Rad+Xscan.md",
+    "SRC/10.工具",
+    "SRC/6.XSS",
+    "考研/政治",
+    "考研/英一",
+    "考研/数一",
+    "考研/408",
+    "考研/media/4a5d5cdbc58940b37db30b090b13b60.png",
+    "考研/media/60e106fd09b518a894a0d9d0c15294f.png",
+    "考研/media",
+    "SRC/4.IDOR/0.IDOR.md",
+    "考研",
     "SRC/2.登录界面/3.重置密码.md",
     "SRC/2.登录界面/4.IP验证绕过.md",
     "SRC/2.登录界面/2.OTP爆破.md",
@@ -195,35 +213,17 @@
     "SRC/2.登录界面/media/Pasted image 20250529033118.png",
     "SRC/2.登录界面/media/Pasted image 20250529033049.png",
     "SRC/2.登录界面/media/Pasted image 20250529033009.png",
-    "SRC/2.登录界面/media/Pasted image 20250529032912.png",
-    "SRC/2.登录界面/media/Pasted image 20250529032823.png",
-    "SRC/2.登录界面/media/Pasted image 20250529031624.png",
-    "SRC/2.登录界面/media/Pasted image 20250529031612.png",
-    "SRC/2.登录界面/media/Pasted image 20250529031228.png",
-    "SRC/2.登录界面/media",
     "区块链安全/2.案例/Corkprotocol --1200 万美元.md",
-    "SRC/4.IDOR/media",
-    "SRC/4.IDOR/0.IDOR.md",
     "SRC/1.Recon/信息收集.md",
-    "SRC/0.前置基础/media",
     "SRC/0.前置基础/3.DNS Status Codes.md",
     "SRC/5.SSRF/0.基础.md",
     "SRC/0.前置基础/2.DNS.md",
     "SRC/0.前置基础/1.IP_address.md",
     "SRC/0.前置基础/0.Internet.md",
     "SRC/资源.md",
-    "SRC/4.IDOR",
-    "SRC/1.Recon",
-    "SRC/2.登录界面",
-    "SRC/5.SSRF",
-    "SRC/0.前置基础",
-    "SRC",
     "A神的课/2.登录界面/0.弱口令.md",
     "A神的课/IDOR/0.IDOR.md",
     "A神的课/1.SSRF/0.基础.md",
-    "A神的课/2.登录界面/1..md",
-    "A神的课/1.Recon/信息收集.md",
-    "A神的课/0.前置基础/3.DNS Status Codes.md",
-    "A神的课/0.前置基础/2.DNS.md"
+    "A神的课/2.登录界面/1..md"
   ]
 }
