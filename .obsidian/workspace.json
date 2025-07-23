@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "39aa74ccffc55c65",
+        "id": "8937d04504abb486",
         "type": "tabs",
         "children": [
           {
-            "id": "e933afbebf58b571",
+            "id": "d3f456599cbb6432",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "安全开发💻/Go开发/0.Go基础/0.基础语法.md",
+                "file": "AI安全🤖/杂项/大模型微调.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.基础语法"
+              "title": "大模型微调"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "net user /add",
+                "query": "waf",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5004348754883,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -141,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "安全开发💻/Go开发/0.Go基础/0.基础语法.md",
+                "file": "AI安全🤖/杂项/大模型微调.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0.基础语法 的大纲"
+              "title": "大模型微调 的大纲"
             }
           },
           {
@@ -165,7 +164,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 315.5
+    "width": 316.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,51 +180,51 @@
   },
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "安全开发💻/Go开发/0.Go基础/1.指针&切片.md",
-    "安全开发💻/Go开发/0.Go基础/0.基础语法.md",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250711032203.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250711025431.png",
-    "RedTeam⚔️/8.靶机/Vulnhub/0.boredhackerblog-social-network.md",
-    "RedTeam⚔️/8.靶机/Vulnhub",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250710213143.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250710212321.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250710211939.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250710210521.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250707223101.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250707220813.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250707220239.png",
-    "安全开发💻/Go开发/0.Go基础/media/Pasted image 20250707215919.png",
-    "安全开发💻/Go开发/0.Go基础/media",
-    "安全开发💻/Go开发/3..md",
-    "安全开发💻/Go开发/2.Gin框架",
-    "安全开发💻/Go开发/1.web开发",
-    "RedTeam⚔️/7.免杀/0.代码基础.md",
-    "安全开发💻/Go开发/0.Go基础",
-    "安全开发💻/Go开发",
-    "未命名",
-    "RedTeam⚔️/7.免杀/1.shellcode基础.md",
-    "RedTeam⚔️/7.免杀/2.代码上的免杀.md",
-    "安全研究/AI辅助挖洞.md",
-    "安全研究/media",
-    "全栈代码审计/Java/4.安全研究/3.内存马/1.基础学习.md",
-    "安全研究",
-    "全栈代码审计/Java/4.安全研究/3.内存马/0.大纲.md",
-    "全栈代码审计/Java/4.安全研究/0.安全基础/0.反射.md",
-    "RedTeam⚔️/7.免杀/media",
-    "RedTeam⚔️/3.内网渗透/0.MSF&CS/2.MSF后渗透.md",
+    "README.md",
+    "AI安全🤖/杂项/大模型微调.md",
+    "安全开发💻/Go开发/2.Mysql/0. Mysql数据库.md",
+    "区块链安全💱/1,智能合约安全/1.认识合约审计.md",
+    "安全开发💻/Go开发/2.Mysql",
+    "区块链安全💱/1,智能合约安全/0.基础知识.md",
+    "区块链安全💱/0.基础知识/2.Foundry.md",
+    "区块链安全💱/0.基础知识/1.Solidity.md",
+    "RedTeam⚔️/0.信息收集/POC编写 - woodpecker插件编写.md",
     "RedTeam⚔️/3.内网渗透/0.MSF&CS/1.MSF实战攻击.md",
-    "RedTeam⚔️/3.内网渗透/0.MSF&CS/0.Msf安装与升级.md",
-    "RedTeam⚔️/3.内网渗透/1.信息收集/1.Windows凭据收集.md",
-    "RedTeam⚔️/3.内网渗透/1.信息收集/0.Windows基础信息收集.md",
-    "RedTeam⚔️/3.内网渗透/1.域/0.kerberos+SPN+DNS.md",
-    "RedTeam⚔️/3.内网渗透/0.MSF&CS/3.CobaltStrike安装.md",
-    "RedTeam⚔️/3.内网渗透/1.信息收集/2.Linux信息收集.md",
-    "RedTeam⚔️/3.内网渗透/1.外网打点.md",
-    "RedTeam⚔️/3.内网渗透/0.多级代理.md",
-    "RedTeam⚔️/3.内网渗透/1.域/6.域林渗透.md",
-    "RedTeam⚔️/3.内网渗透/0.蜜罐.md",
-    "RedTeam⚔️/3.内网渗透/1.域/5.域内提权.md",
-    "RedTeam⚔️/3.内网渗透/1.域/4.横向移动.md",
-    "RedTeam⚔️/3.内网渗透/1.域/1.AD信息收集.md"
+    "全栈代码审计/Java/1.快速代码审计/0.Sql注入漏洞.md",
+    "RedTeam⚔️/8.靶机/Vulnhub/0.boredhackerblog-social-network.md",
+    "AI安全🤖/杂项/逆向Deepseek-接口.md",
+    "AI安全🤖/杂项",
+    "安全开发💻/Go开发/4.Go-MCP/0.基础.md",
+    "未命名",
+    "安全开发💻/Go开发/1.web开发/2.Gin框架.md",
+    "安全开发💻/Go开发/4.Go-MCP",
+    "安全开发💻/Go开发/1.web开发/media/Pasted image 20250717105153.png",
+    "安全开发💻/Go开发/1.web开发/media/Pasted image 20250717105119.png",
+    "RedTeam⚔️/8.靶机/HTB/0.Timelapse.md",
+    "安全开发💻/Go开发/1.web开发/media/Pasted image 20250714235153.png",
+    "安全开发💻/Go开发/1.web开发/media/Pasted image 20250714232356.png",
+    "安全开发💻/Go开发/0.Go基础/1.指针&切片.md",
+    "RedTeam⚔️/资源.md",
+    "RedTeam⚔️/0.信息收集/3.CDN绕过.md",
+    "RedTeam⚔️/0.信息收集/2.主动信息收集.md",
+    "RedTeam⚔️/0.信息收集/1.被动信息收集.md",
+    "RedTeam⚔️/0.信息收集/0.RedTeam的艺术.md",
+    "安全开发💻/Go开发/1.web开发/media/Pasted image 20250714074505.png",
+    "安全开发💻/Go开发/1.web开发/media/Pasted image 20250714070223.png",
+    "安全开发💻/Go开发/1.web开发/media",
+    "安全开发💻/Go开发/2.Gin框架/未命名.md",
+    "BugBountyCVE/Next.js/CVE-2024-34351.md",
+    "BugBountyCVE/Next.js/未命名.md",
+    "BugBountyCVE/Next.js/media/Pasted image 20250713203556.png",
+    "BugBountyCVE/Next.js/media",
+    "BugBountyCVE/未命名.md",
+    "BugBountyCVE/Next.js",
+    "区块链安全💱/0.基础知识/Advanced Foundry.md",
+    "BugBountyCVE",
+    "区块链安全💱/0.基础知识/media/Pasted image 20250712222921.png",
+    "区块链安全💱/0.基础知识/media/Pasted image 20250712174224.png",
+    "区块链安全💱/0.基础知识/media/Pasted image 20250711214026.png",
+    "RedTeam⚔️/8.靶机/Vulnhub",
+    "安全开发💻/Go开发/0.Go基础/media"
   ]
 }
