@@ -1,9 +1,23 @@
 > 参考[《赛博回忆录》](https://wx.zsxq.com/dweb2/index/group/88512188158852)中 [《如何学习》](https://wx.zsxq.com/dweb2/index/topic_detail/581145515484554)
 ## 想要完成的方向
 - [x] 💵SRC -- 自动化赏金猎人
+	- [ ] 北山 
+	- [ ] 瓜姐
+	- [ ] N神
+	- [ ] 自动化（道法自然订阅/ 每日rss更新新思路 AI学习+分析+挖 ）
 - [ ] 💻代码审计 
+	- [ ] https://github.com/ASTTeam/CodeQL?tab=readme-ov-file
+	- [ ] https://www.assetnote.io/resources/research
 - [ ] 🔥区块链安全
+	- [ ] https://updraft.cyfrin.io/courses/solidity
+	- [ ] Solana
+- [ ] ⛷️ 安全开发
+	- [ ] Go
+	- [ ] Leetcode
+	- [ ] 自动化挖洞
+	- [ ] SAST  [软件分析课程](https://www.bilibili.com/video/BV1b7411K7P4/?buvid=XX0F3950D63C903EFF2F10706B03F7BDD4AB8&from_spmid=search.search-result.0.0&is_story_h5=false&mid=rL6ilHNjPA2IKmJCTTp20n8FTQ%2FSZMtL1rElX6M3iMo%3D&plat_id=114&share_from=ugc&share_medium=android&share_plat=android&share_session_id=cc7b48f9-a612-4282-9eaf-7d5ec8fdce45&share_source=WEIXIN&share_tag=s_i&spmid=united.player-video-detail.0.0&timestamp=1746176890&unique_k=9pZKxUk&up_id=2919428)
 - [ ] 🔭AI学习 + 安全
+	- [ ] https://embracethered.com/blog
 - [ ] 💡红队 -- 众测/远程红打基础
 
 
