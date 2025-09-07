@@ -1,12 +1,11 @@
-> 参考[《赛博回忆录》](https://wx.zsxq.com/dweb2/index/group/88512188158852)中 [《如何学习》](https://wx.zsxq.com/dweb2/index/topic_detail/581145515484554)一文，对自己信安学习的一些规划
+> 参考[《赛博回忆录》](https://wx.zsxq.com/dweb2/index/group/88512188158852)中 [《如何学习》](https://wx.zsxq.com/dweb2/index/topic_detail/581145515484554)
 ## 想要完成的方向
-- [x] 💵SRC -- 主要是未来发展方向是赏金猎人
-- [ ] 💻代码审计 -- 白盒测试/复现漏洞/CNVD证书/CVE编号
+- [x] 💵SRC -- 自动化赏金猎人
+- [ ] 💻代码审计 
+- [ ] 🔥区块链安全
+- [ ] 🔭AI学习 + 安全
 - [ ] 💡红队 -- 众测/远程红打基础
-	- [ ] 免杀
-	- [ ] 权限维持
-	- [ ] 内网渗透
-- [ ❌ ] 🔭深度学习 -- 大概率未来研究方向
+
 
 ## 使用方法（摘自[如何学习](https://wx.zsxq.com/dweb2/index/topic_detail/581145515484554)）
 ### 现阶段自我定位
