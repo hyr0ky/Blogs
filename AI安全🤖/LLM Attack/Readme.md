@@ -7,3 +7,4 @@
 - [Amazon rsources](https://docs.aws.amazon.com/prescriptive-guidance/latest/llm-prompt-engineering-best-practices/resources.html)
 - [Awesome-llm-security](https://github.com/corca-ai/awesome-llm-security)
 - [OWASP Top 10](https://llmtop10.com)
+- https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/
