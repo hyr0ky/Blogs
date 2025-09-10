@@ -7,6 +7,7 @@
 	- [ ] 自动化（道法自然订阅/ 每日rss更新新思路 AI学习+分析+挖 ）
 - [ ] 💻代码审计 
 	- [ ] https://github.com/ASTTeam/CodeQL?tab=readme-ov-file
+	- [ ] https://github.com/Drun1baby/JavaSecurityLearning
 	- [ ] https://www.assetnote.io/resources/research
 - [ ] 🔥区块链安全
 	- [ ] https://updraft.cyfrin.io/courses/solidity

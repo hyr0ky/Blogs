@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "全栈代码审计/Java/4.安全研究/0.安全基础/1.反射.md",
+                "file": "全栈代码审计/Java/5.CodeQl/4.学习优秀文章.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.反射"
+              "title": "4.学习优秀文章"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"RedTeam⚔️/5.提权/系统提权/Windows/media/\" ",
+                "query": "remoteflo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "全栈代码审计/Java/4.安全研究/0.安全基础/1.反射.md",
+                "file": "全栈代码审计/Java/5.CodeQl/4.学习优秀文章.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.反射 的大纲"
+              "title": "4.学习优秀文章 的大纲"
             }
           },
           {
@@ -177,12 +177,24 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false,
-      "random-note:开始漫游笔记": false,
-      "publish:发布更改": false
+      "random-note:开始漫游笔记": false
     }
   },
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
+    "全栈代码审计/Java/5.CodeQl/5.挖掘Fastjson新的利用链.md",
+    "全栈代码审计/Java/5.CodeQl/1.环境构建.md",
+    "全栈代码审计/Java/5.CodeQl/4.学习优秀文章.md",
+    "全栈代码审计/Java/5.CodeQl/media/Pasted image 20250910192427.png",
+    "全栈代码审计/Java/5.CodeQl/2.CodeQl语法.md",
+    "全栈代码审计/Java/5.CodeQl/3.Codeql寻找JavaSec漏洞.md",
+    "全栈代码审计/Java/1.快速代码审计/0.Sql注入漏洞.md",
+    "全栈代码审计/Java/4.安全研究/1.反序列化/1.CC链分析.md",
+    "全栈代码审计/Java/4.安全研究/1.反序列化/0.反序列化分析.md",
+    "全栈代码审计/Java/4.安全研究/3.内存马/1.基础学习.md",
+    "全栈代码审计/Java/4.安全研究/0.安全基础/1.反射.md",
+    "全栈代码审计/Java/4.安全研究/0.安全基础/0.序列化和反序列化.md",
+    "README.md",
     "全栈代码审计/Java/0.Java基础/9.JDNI基础.md",
     "全栈代码审计/Java/0.Java基础/8.RMI基础.md",
     "全栈代码审计/Java/0.Java基础/7.序列化和反序列化.md",
@@ -193,12 +205,9 @@
     "全栈代码审计/Java/0.Java基础/2.分层思想与MVC模式.md",
     "全栈代码审计/Java/0.Java基础/1.Web基础/1.基础语法.md",
     "全栈代码审计/Java/0.Java基础/1.Web基础/0.Servlet、过滤器、监听器和拦截器.md",
-    "README.md",
     "AI安全🤖/LLM Attack/Readme.md",
-    "全栈代码审计/Java/4.安全研究/0.安全基础/3.序列化和反序列化.md",
     "全栈代码审计/Js/Pdf.js cve-2024-4367.md",
     "全栈代码审计/Js/Codeql/0.基础.md",
-    "RedTeam⚔️/Nmap.md",
     "N神/9.postmessage/media/Pasted image 20250827105335.png",
     "N神/9.postmessage/media/Pasted image 20250827110157.png",
     "N神/9.postmessage/media/Pasted image 20250827104207.png",
@@ -208,20 +217,9 @@
     "N神/4.IDOR/media/Pasted image 20250226222826.png",
     "N神/4.IDOR/media/Pasted image 20250226222048.png",
     "N神/4.IDOR/media/Pasted image 20250226222035.png",
-    "N神/4.IDOR/media/Pasted image 20250226221901.png",
     "N神/9.postmessage/media",
-    "N神/9.postmessage/1.利用.md",
-    "N神/9.postmessage/0.基础.md",
-    "N神/8.SQL/0.SQL.md",
-    "N神/7.RCE/0.基础.md",
     "N神/4.IDOR/media",
-    "N神/3.CSRF/1.学习.md",
-    "N神/4.IDOR/0.IDOR.md",
-    "N神/5.SSRF/0.基础.md",
-    "N神/3.CSRF/0.报告.md",
-    "N神/1.Recon/信息收集.md",
     "N神/10.工具/media",
-    "N神/2.登录界面/7.Mass Assignment.md",
     "N神/2.登录界面/media",
     "N神/0.前置基础/media",
     "N神/9.postmessage",
