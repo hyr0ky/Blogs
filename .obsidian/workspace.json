@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "软件分析/0.OKR.md",
+                "file": "安全开发💻/年度OKR.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "0.OKR"
+              "title": "年度OKR"
             }
           }
         ]
@@ -182,15 +192,23 @@
   },
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "软件分析/1.Introduction.md",
-    "软件分析/0.OKR.md",
-    "软件分析/media/Pasted image 20250914164603.png",
-    "软件分析/media",
+    "安全开发💻/media/Pasted image 20250914213216.png",
+    "安全开发💻/media/e40c3d5435b7f0c5c2b9b49b4ba06e8a.png",
+    "安全开发💻/media",
+    "安全开发💻/软件分析/0.OKR.md",
+    "安全开发💻/年度OKR.md",
+    "安全开发💻/Hiroki的工具/PackFuzzer/1.0版本.md",
+    "README.md",
+    "安全开发💻/Hiroki的工具/OKR.md",
+    "未命名",
+    "安全开发💻/软件分析/1.Introduction.md",
+    "安全开发💻/软件分析/media/Pasted image 20250914164603.png",
+    "安全开发💻/软件分析/media",
     "软件分析/南京大学/0.资源.md",
     "软件分析/南京大学/1..md",
     "RedTeam⚔️/3.内网渗透/0.基础工具/5.Webshell管理工具.md",
     "软件分析/南京大学",
-    "软件分析",
+    "安全开发💻/软件分析",
     "RedTeam⚔️/3.内网渗透/0.基础工具/4.CS创建监听器&本地远程加载插件.md",
     "RedTeam⚔️/3.内网渗透/0.基础工具/3.CobaltStrike安装.md",
     "RedTeam⚔️/3.内网渗透/0.基础工具/2.MSF后渗透.md",
@@ -211,22 +229,14 @@
     "全栈代码审计/Java/5.CodeQl/1.环境构建.md",
     "全栈代码审计/Java/5.CodeQl/2.CodeQl语法.md",
     "全栈代码审计/Java/5.CodeQl/media/Pasted image 20250911151750.png",
-    "全栈代码审计/Java/5.CodeQl/6.从官方QL规则到实战.md",
-    "全栈代码审计/Java/5.CodeQl/5.挖掘Fastjson新的利用链.md",
     "全栈代码审计/Java/5.CodeQl/media/e8de8c950452647ce414104581781004.png",
     "全栈代码审计/Java/5.CodeQl/media/Pasted image 20250910192427.png",
-    "全栈代码审计/Java/1.快速代码审计/0.Sql注入漏洞.md",
-    "全栈代码审计/Java/4.安全研究/1.反序列化/1.CC链分析.md",
-    "全栈代码审计/Java/4.安全研究/1.反序列化/0.反序列化分析.md",
     "N神/9.postmessage/media/Pasted image 20250827105335.png",
     "N神/9.postmessage/media/Pasted image 20250827110157.png",
     "N神/9.postmessage/media/Pasted image 20250827104207.png",
     "N神/4.IDOR/media/Pasted image 20250226230005.png",
-    "N神/4.IDOR/media/Pasted image 20250226223231.png",
     "N神/9.postmessage/media",
     "N神/4.IDOR/media",
-    "N神/10.工具/media",
-    "N神/2.登录界面/media",
-    "N神/0.前置基础/media"
+    "N神/10.工具/media"
   ]
 }
