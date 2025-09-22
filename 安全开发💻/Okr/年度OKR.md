@@ -11,6 +11,7 @@
 	- [ ] 身份验证绕过
 	- [ ] 内存马
 	- [ ] 挖掘1-2个重大系统CVE（OA系统开始）
+- [ ] Go安全学习：  https://github.com/HackGolang/HackGolang
 - [ ] 学习并整理[南大软件分析](https://www.bilibili.com/video/BV1b7411K7P4/?spm_id_from=333.1387.upload.video_card.click&vd_source=5f4f31ca939fbba01cb0ba2f7b60b9e3)课程笔记 
 	- [ ] https://ranger-nju.gitbook.io/static-program-analysis-book
 	- [ ] https://mp.weixin.qq.com/s/DuIfZbAq0Z-_9ShJ4vRGWQ
