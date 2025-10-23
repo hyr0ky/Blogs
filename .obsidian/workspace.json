@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.50537109375,
-    "collapsed": true
+    "width": 212.50537109375
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -181,7 +180,7 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "870d2807338bc282",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
     "区块链安全💱/2.案例/media/Pasted image 20251023192843.png",
     "区块链安全💱/2.案例/media/Pasted image 20251023191144.png",
