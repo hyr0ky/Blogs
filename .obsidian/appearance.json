@@ -1,3 +1,4 @@
 {
-  "baseFontSize": 11
+  "baseFontSize": 15,
+  "baseFontSizeAction": true
 }
