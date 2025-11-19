@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "870d2807338bc282",
+            "id": "f372037950b1788e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BugBountyCVE/SSRF/HackingHub靶场.md",
-                "mode": "source",
+                "file": "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HackingHub靶场"
+              "title": "1.nuclei-xss"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212.50537109375
+    "width": 276.50244903564453,
+    "collapsed": true
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -141,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BugBountyCVE/SSRF/HackingHub靶场.md",
+                "file": "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "HackingHub靶场 的大纲"
+              "title": "1.nuclei-xss 的大纲"
             }
           },
           {
@@ -182,51 +183,51 @@
   },
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "BugBountyCVE/SSRF/media/Pasted image 20251030212350.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030204655.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030204513.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030204431.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030204318.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030195054.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030195027.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030194658.png",
-    "BugBountyCVE/SSRF/media/Pasted image 20251030194511.png",
-    "BugBountyCVE/RCE/HackingHub靶场.md",
+    "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
+    "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/0.基础.md",
+    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media/Pasted image 20251119162236.png",
+    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media/Pasted image 20251119162200.png",
+    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media/Pasted image 20251119161939.png",
+    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media",
+    "区块链安全💱/0.基础知识/1.Solidity.md",
+    "区块链安全💱/0.基础知识/media/datafeed1.png",
+    "区块链安全💱/0.基础知识/media/datafeed3.png",
+    "区块链安全💱/0.基础知识/media/interacting-contract1.png",
+    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/资源.md",
+    "全栈代码审计/Java/4.安全研究/0.安全基础/1.反射.md",
+    "全栈代码审计/Java/4.安全研究/0.安全基础/0.序列化和反序列化.md",
+    "全栈代码审计/Java/4.安全研究/0.安全基础/0.类加载机制.md",
+    "全栈代码审计/Java/4.安全研究/0.安全基础/2.JDNI.md",
+    "全栈代码审计/Java/4.安全研究/0.安全基础/1.RMI.md",
+    "BugBountyCVE/9.AutoBugBounty/media/Pasted image 20251110204642.png",
+    "BugBountyCVE/9.AutoBugBounty/media/Pasted image 20251110204547.png",
+    "BugBountyCVE/9.AutoBugBounty/media",
     "BugBountyCVE/Demo.md",
-    "BugBountyCVE/SSRF/HackingHub靶场.md",
-    "BugBountyCVE/Next.js/未命名.md",
-    "BugBountyCVE/SSRF/media/Pasted image 20251029191744.png",
-    "BugBountyCVE/SSRF/media",
-    "BugBountyCVE/SSRF",
-    "BugBountyCVE/RCE/media/Pasted image 20251029173949.png",
-    "BugBountyCVE/RCE/media",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/0.Webshell管理工具.md",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/2.CS -- 常用.md",
-    "BugBountyCVE/RCE",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/1.MSF--常用.md",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/2.CS/1.CS创建监听器&本地远程加载插件.md",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/2.CS/0.CobaltStrike安装.md",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/2.CS",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/1.MSF/2.MSF后渗透.md",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/1.MSF/0.Msf安装与升级.md",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/1.MSF",
-    "RedTeam⚔️/3.内网渗透/0.基础工具/1.MSF/1.MSF实战攻击.md",
-    "RedTeam⚔️/7.靶机/HTB/0.Timelapse.md",
-    "安全研究/资源.md",
-    "安全开发💻/Okr/年度OKR.md",
-    "README.md",
-    "AI安全🤖/微调&杂项/XBOW.md",
-    "区块链安全💱/2.案例/3.BankrollNetwork.md",
-    "AI安全🤖/AI&安全/0.基础知识.md",
-    "AI安全🤖/AI/0.机器学习工具箱.md",
-    "AI安全🤖/微调&杂项/大模型微调.md",
-    "AI安全🤖/微调&杂项/逆向Deepseek-接口.md",
-    "AI安全🤖/微调&杂项",
-    "AI安全🤖/AI&安全/media",
-    "AI安全🤖/AI&安全",
-    "AI安全🤖/AI/6.决策树与随机森林算法.md",
-    "AI安全🤖/AI/9.支持向量机算法.md",
-    "AI安全🤖/AI/8.逻辑回归算法.md",
-    "AI安全🤖/AI"
+    "安全研究/二进制漏洞/0.基础/1.AFL源码详解.md",
+    "安全研究/二进制漏洞/0.基础/media/无标题-1.png",
+    "安全研究/二进制漏洞/0.基础/media/无标题.png",
+    "安全研究/二进制漏洞/0.基础/media",
+    "安全研究/二进制漏洞/0.基础/0.模糊测试技术.md",
+    "安全研究/二进制漏洞/3.审计和Codeql/2.代码审计.md",
+    "安全研究/二进制漏洞/3.审计和Codeql/1.Codeql.md",
+    "安全研究/二进制漏洞/3.审计和Codeql/0.污点分析技术.md",
+    "安全研究/二进制漏洞/2.漏洞挖掘/2.Linux内核漏洞挖掘.md",
+    "安全研究/二进制漏洞/2.漏洞挖掘/1.网络协议漏洞挖掘.md",
+    "安全研究/二进制漏洞/1.工具改造/2.从0实现模糊测试工具.md",
+    "安全研究/二进制漏洞/1.工具改造/1.改造模糊测试工具.md",
+    "安全研究/二进制漏洞/0.基础/3.模糊测试工具基础使用.md",
+    "安全研究/二进制漏洞/0.基础/2.ASAN原理解析.md",
+    "安全研究/二进制漏洞/4.漏洞复现",
+    "安全研究/二进制漏洞/3.审计和Codeql",
+    "安全研究/二进制漏洞/2.漏洞挖掘",
+    "安全研究/二进制漏洞/1.工具改造",
+    "安全研究/二进制漏洞/0.基础",
+    "BugBountyCVE/3.SSRF/0.基础总结.md",
+    "安全研究/二进制漏洞",
+    "安全研究/Chrome/资源.md",
+    "安全研究/Chrome",
+    "BugBountyCVE/3.SSRF/1.后利用.md",
+    "BugBountyCVE/2.登录界面/7.Mass Assignment.md"
   ]
 }
