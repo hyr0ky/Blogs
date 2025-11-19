@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+                "file": "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.nuclei-xss"
+              "title": "0.n8n"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+                "file": "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.nuclei-xss 的大纲"
+              "title": "0.n8n 的大纲"
             }
           },
           {
@@ -181,10 +181,10 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "881acb3e561cb818",
+  "active": "f372037950b1788e",
   "lastOpenFiles": [
-    "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
     "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+    "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
     "BugBountyCVE/9.AutoBugBounty/media/3cef00a32571ed32256643a067cce846.png",
     "BugBountyCVE/9.AutoBugBounty/media/8293cb74abb81fc49d1a76188e386145.png",
     "BugBountyCVE/9.AutoBugBounty/media/709cf0e6cdbe35ff5aa9c607da24e2c5.png",
