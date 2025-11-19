@@ -1,0 +1,293 @@
+{
+  "name": "xss v2",
+  "nodes": [
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=gau  {{ $node[\"Call\"].json[\"domain\"] }} --proxy http://127.0.0.1:7890 > ./info/gau_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -3008,
+        96
+      ],
+      "id": "a6d3596e-aab9-475f-a82f-c9e9c0707d14",
+      "name": "Gau",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/subs_live_{{ $node[\"Call\"].json[\"domain\"] }}.txt | hakrawler -subs > ./info/hakrawler_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -2784,
+        96
+      ],
+      "id": "75c3b6d9-d8ca-4ae4-abfe-4f247a2a55bc",
+      "name": "Hakrawler",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/subs_live_{{ $node[\"Call\"].json[\"domain\"] }}.txt | katana -sc -kf all -jc -c 50 > ./info/katana_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -2560,
+        96
+      ],
+      "id": "2242f9ac-eea5-4b2c-a53b-d62523425d91",
+      "name": "Katana",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/*_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt >> ./info/urls_0_{{ $node[\"Call\"].json[\"domain\"] }}.txt  &&  cat ./info/urls_0_{{ $node[\"Call\"].json[\"domain\"] }}.txt | grep -iv \"\\.(js|svg|css|png|mp3|mp4|jpg)\"| MoreFind dedu --smart -t 1 >./info/urls_1_{{ $node[\"Call\"].json[\"domain\"] }}.txt && sort -u ./info/urls_1_{{ $node[\"Call\"].json[\"domain\"] }}.txt > ./info/urls_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -2336,
+        96
+      ],
+      "id": "a32ef4d5-ee03-4e6d-889e-3c09d53bf6d4",
+      "name": "路径去重",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"domain\":\"tesla-space.com\"\n}"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -3232,
+        96
+      ],
+      "id": "cf2bf1b0-28dd-42b9-88c0-8409ae8f629b",
+      "name": "Call"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=### Find Xss ⏰\n- **Domain**：{{ $('Call').item.json.domain }}\n- **Xss**:\n{{ $('确定Xss参数').item.stdout }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        -1472,
+        0
+      ],
+      "id": "ee2bc02d-dac1-453f-b6f9-d6d5fcdcbd81",
+      "name": "xss-n8n",
+      "webhookId": "528bea8d-8495-43ac-be3f-a8b0d7229988",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "hOJQRrveSztGvyRI",
+          "name": "xss-n8n"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=nuclei -t xss_mul.yaml -l ./info/urls_{{ $node[\"Call\"].json[\"domain\"] }}.txt -dast -o ./info/xss_mul_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -2128,
+        96
+      ],
+      "id": "1f335d95-f787-49fe-92b2-7e93ee3668b3",
+      "name": "XSS多参数检测",
+      "alwaysOutputData": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "command": "=cat ./info/xss_mul_{{ $node[\"Call\"].json[\"domain\"] }}.txt | awk '{print $4}' > ./info/xss_urls_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -1920,
+        0
+      ],
+      "id": "8fb13e7e-98e1-4cfb-9fd5-ea58c25e4d89",
+      "name": "处理xss url"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=nuclei -t xss_single.yaml -l ./info/xss_urls_{{ $node[\"Call\"].json[\"domain\"] }}.txt -dast -silent"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -1712,
+        0
+      ],
+      "id": "d36c60d9-42b2-4187-bf84-57a636651fa8",
+      "name": "确定Xss参数",
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=————————————————————\n- {{ $node[\"Call\"].json[\"domain\"] }} Xss扫描结束未发现XSS 😞\n————————————————————",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        -1920,
+        144
+      ],
+      "id": "70dfd2bd-aa8c-420a-86bd-6345601bea92",
+      "name": "xss-n8n未发现",
+      "webhookId": "528bea8d-8495-43ac-be3f-a8b0d7229988",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "hOJQRrveSztGvyRI",
+          "name": "xss-n8n"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Call": [
+      {
+        "json": {
+          "domain": "tesla-space.com"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Gau": {
+      "main": [
+        [
+          {
+            "node": "Hakrawler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hakrawler": {
+      "main": [
+        [
+          {
+            "node": "Katana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Katana": {
+      "main": [
+        [
+          {
+            "node": "路径去重",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "路径去重": {
+      "main": [
+        [
+          {
+            "node": "XSS多参数检测",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call": {
+      "main": [
+        [
+          {
+            "node": "Gau",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xss-n8n": {
+      "main": [
+        []
+      ]
+    },
+    "XSS多参数检测": {
+      "main": [
+        [
+          {
+            "node": "处理xss url",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "xss-n8n未发现",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "处理xss url": {
+      "main": [
+        [
+          {
+            "node": "确定Xss参数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "确定Xss参数": {
+      "main": [
+        [
+          {
+            "node": "xss-n8n",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2db7beb6-0591-45a2-bc6e-b56a0f9f580c",
+  "meta": {
+    "instanceId": "31c614437b5591b68cf6dff1df3a6d23fa686ecf4d5bd98eb68bb818a2a39857"
+  },
+  "id": "ZCopCC9GCUvnFDk7",
+  "tags": []
+}
