@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.50244903564453,
-    "collapsed": true
+    "width": 276.50244903564453
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -181,10 +180,12 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "f372037950b1788e",
+  "active": "460a6ac6fb4eeea3",
   "lastOpenFiles": [
-    "BugBountyCVE/9.AutoBugBounty/media/53da1e43d723498a2e6a6fb431da0251.png",
     "BugBountyCVE/9.AutoBugBounty/media/xss v2.json",
+    "BugBountyCVE/9.AutoBugBounty/media/xss v2(1).json",
+    "BugBountyCVE/9.AutoBugBounty/media/Pasted image 20251120005450.png",
+    "BugBountyCVE/9.AutoBugBounty/media/53da1e43d723498a2e6a6fb431da0251.png",
     "README.md",
     "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
     "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
@@ -204,8 +205,6 @@
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media/Pasted image 20251119161939.png",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media",
     "区块链安全💱/0.基础知识/1.Solidity.md",
-    "区块链安全💱/0.基础知识/media/datafeed1.png",
-    "区块链安全💱/0.基础知识/media/datafeed3.png",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/资源.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/1.反射.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/0.序列化和反序列化.md",
