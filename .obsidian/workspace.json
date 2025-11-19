@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
-                "mode": "preview",
+                "file": "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.nuclei-xss"
+              "title": "0.n8n"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+                "file": "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.nuclei-xss 的大纲"
+              "title": "0.n8n 的大纲"
             }
           },
           {
@@ -183,8 +183,18 @@
   },
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
     "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+    "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
+    "BugBountyCVE/9.AutoBugBounty/media/3cef00a32571ed32256643a067cce846.png",
+    "BugBountyCVE/9.AutoBugBounty/media/8293cb74abb81fc49d1a76188e386145.png",
+    "BugBountyCVE/9.AutoBugBounty/media/709cf0e6cdbe35ff5aa9c607da24e2c5.png",
+    "BugBountyCVE/9.AutoBugBounty/media/f38d87abead28df48cc5a7fd4b8a51a1.png",
+    "BugBountyCVE/9.AutoBugBounty/media/ad75d7b6bd7e88943294c43d518288db.png",
+    "BugBountyCVE/9.AutoBugBounty/media/路径收集+XSS.json",
+    "BugBountyCVE/9.AutoBugBounty/media/资产匹配推送.json",
+    "BugBountyCVE/9.AutoBugBounty/media/子域名+资产收集.json",
+    "BugBountyCVE/9.AutoBugBounty/media/FoFa.json",
+    "BugBountyCVE/9.AutoBugBounty/media/RSS.json",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/0.基础.md",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media/Pasted image 20251119162236.png",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media/Pasted image 20251119162200.png",
@@ -193,20 +203,15 @@
     "区块链安全💱/0.基础知识/1.Solidity.md",
     "区块链安全💱/0.基础知识/media/datafeed1.png",
     "区块链安全💱/0.基础知识/media/datafeed3.png",
-    "区块链安全💱/0.基础知识/media/interacting-contract1.png",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/资源.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/1.反射.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/0.序列化和反序列化.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/0.类加载机制.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/2.JDNI.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/1.RMI.md",
-    "BugBountyCVE/9.AutoBugBounty/media/Pasted image 20251110204642.png",
-    "BugBountyCVE/9.AutoBugBounty/media/Pasted image 20251110204547.png",
     "BugBountyCVE/9.AutoBugBounty/media",
     "BugBountyCVE/Demo.md",
     "安全研究/二进制漏洞/0.基础/1.AFL源码详解.md",
-    "安全研究/二进制漏洞/0.基础/media/无标题-1.png",
-    "安全研究/二进制漏洞/0.基础/media/无标题.png",
     "安全研究/二进制漏洞/0.基础/media",
     "安全研究/二进制漏洞/0.基础/0.模糊测试技术.md",
     "安全研究/二进制漏洞/3.审计和Codeql/2.代码审计.md",
@@ -220,14 +225,8 @@
     "安全研究/二进制漏洞/0.基础/2.ASAN原理解析.md",
     "安全研究/二进制漏洞/4.漏洞复现",
     "安全研究/二进制漏洞/3.审计和Codeql",
-    "安全研究/二进制漏洞/2.漏洞挖掘",
-    "安全研究/二进制漏洞/1.工具改造",
-    "安全研究/二进制漏洞/0.基础",
     "BugBountyCVE/3.SSRF/0.基础总结.md",
-    "安全研究/二进制漏洞",
     "安全研究/Chrome/资源.md",
-    "安全研究/Chrome",
-    "BugBountyCVE/3.SSRF/1.后利用.md",
-    "BugBountyCVE/2.登录界面/7.Mass Assignment.md"
+    "BugBountyCVE/3.SSRF/1.后利用.md"
   ]
 }

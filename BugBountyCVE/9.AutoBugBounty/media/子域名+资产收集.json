@@ -1,0 +1,972 @@
+{
+  "name": "子域名+资产收集",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                6
+              ],
+              "triggerAtHour": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -752,
+        400
+      ],
+      "id": "09617773-6a94-4625-afae-c126d24e90ed",
+      "name": "Day 一周"
+    },
+    {
+      "parameters": {
+        "url": "https://chaos-data.projectdiscovery.io/index.json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -528,
+        400
+      ],
+      "id": "01741bc8-6705-4446-8c3a-220c641fae37",
+      "name": "获取Chaos索引",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b4fe3152-d68a-4826-8ab7-adfca3cf41e2",
+              "name": "Data",
+              "value": "={{ $json.data.parseJson() }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -304,
+        400
+      ],
+      "id": "c12c0bcc-e5f4-4ed9-9618-46652aeadac8",
+      "name": "响应解析"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "Data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        400
+      ],
+      "id": "3140895d-16ee-4abd-9fec-a5ace4277879",
+      "name": "数组拆分"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=wget {{ $json.URL}} -P ./Chaos"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        368,
+        400
+      ],
+      "id": "d5230138-bb8d-4ea5-9fbd-5c76ec3b44cd",
+      "name": "获取ZIP",
+      "retryOnFail": true,
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "waitBetweenTries": 3000,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "command": "cd ./Chaos ;ls *.zip | xargs -n 1 unzip -o"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        592,
+        400
+      ],
+      "id": "6c4df311-7754-42ed-a411-5faf89835eeb",
+      "name": "解压ZIP",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "command": "cd ./Chaos ;cat *.txt | unfurl --unique apexes | MoreFind dedu"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        816,
+        400
+      ],
+      "id": "8b8ce6c8-bf1a-4066-a4e6-585b314007db",
+      "name": "查看域名并去重",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "a2d02fc9-8b6f-43ef-aa8e-b126f9eb7f24",
+              "leftValue": "={{ $json.bounty }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "d85eb6b2-2edc-495e-aaa9-36e370970806",
+              "leftValue": "={{$json.count}}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        144,
+        400
+      ],
+      "id": "9d8e74e4-8c9a-4c17-9f58-5ff99c88cca4",
+      "name": "只要Bounty+存在资产的"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2168ff9f-b6f8-4a72-91dd-8eaa04844274",
+              "name": "Data",
+              "value": "={{ $json.stdout.split(\"\\n\") }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1040,
+        400
+      ],
+      "id": "7b6a1f60-8554-402f-9bc6-1f9eab994ee2",
+      "name": "获取根域名"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "Data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1264,
+        400
+      ],
+      "id": "3ca1a89d-de7a-4c6c-a528-64214d005b95",
+      "name": "根域名数据处理"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=subfinder -d {{ $json.Data }} -o ./info/subs_{{$json.Data}}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1488,
+        400
+      ],
+      "id": "3995efdd-962a-416c-8e1d-f40548775a53",
+      "name": "SubFinder子域名",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/subs_{{ $node[\"根域名数据处理\"].json[\"Data\"] }}.txt | httpx -nf | tee ./info/subs_live_{{ $node[\"根域名数据处理\"].json[\"Data\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1712,
+        400
+      ],
+      "id": "0c19df60-a80c-4e65-92b1-8661847164b9",
+      "name": "子域名测活",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=./WhatWeb/whatweb -i ./info/subs_live_{{ $node[\"根域名数据处理\"].json[\"Data\"] }}.txt --log-brief=./info/whatweb_result_{{ $node[\"根域名数据处理\"].json[\"Data\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1984,
+        -48
+      ],
+      "id": "fe1ec638-4fe2-4f7c-8224-df945fa0111e",
+      "name": "WhatWeb技术栈",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=./debug_ehole.sh {{ $node[\"根域名数据处理\"].json[\"Data\"] }}"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1984,
+        112
+      ],
+      "id": "ca10704a-d28d-41be-94e2-b4cc04abb8f2",
+      "name": "Ehole技术栈",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"domain\": \"{{$json.stdout.split(\"\\n\")[2].slice(23,-4)}}\",\n  \"ehole_file\": \"{{$json.stdout.split(\"\\n\")[3].slice(6,)}}\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2208,
+        112
+      ],
+      "id": "93804a5c-a216-43fb-a4c6-73c4a7689a91",
+      "name": "处理Ehole保存路径"
+    },
+    {
+      "parameters": {
+        "content": "### 技术栈识别\n\n- **WhatWeb**\n- **Ehole**",
+        "height": 272,
+        "width": 384
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2176,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "32eee048-8c11-41c5-8b52-e68f75e13160",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Chaos资产获取\n1.  **获取资产索引**\n2. **下载有BugBounty的资产**",
+        "width": 1440
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -432,
+        176
+      ],
+      "typeVersion": 1,
+      "id": "854aa440-597b-4cc8-bc98-3ac2f823d80a",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## 子域名处理\n- **Subfinder**获取子域名\n- **httpx** 验活子域名\n",
+        "height": 192,
+        "width": 544,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1248,
+        160
+      ],
+      "typeVersion": 1,
+      "id": "04cdb5c9-bf39-47c9-a086-66d868403b39",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "cSTBZpR339oqXzsS",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/cSTBZpR339oqXzsS",
+          "cachedResultName": "路径收集+XSS"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "domain": "={{ $('获取根域名').item.json.Data }}"
+          },
+          "matchingColumns": [
+            "domain"
+          ],
+          "schema": [
+            {
+              "id": "domain",
+              "displayName": "domain",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1984,
+        544
+      ],
+      "id": "7ce7e976-0ddf-406e-8acc-fd2571e115c5",
+      "name": "Call 'XSS'",
+      "retryOnFail": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "fileSelector": "=./info/whatweb_result_{{ $node[\"根域名数据处理\"].json[\"Data\"] }}.txt",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        2448,
+        -48
+      ],
+      "id": "6f9570de-f2a0-4db8-88af-65822afc30b4",
+      "name": "Read WhatWeb"
+    },
+    {
+      "parameters": {
+        "fileSelector": "={{ $json.ehole_file }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        2448,
+        112
+      ],
+      "id": "77d74101-60b1-4a7f-81a8-10512ec248df",
+      "name": "Read Ehole",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        2656,
+        -48
+      ],
+      "id": "51067d73-c9ac-4481-a54a-278716585e01",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "operation": "fromJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        2656,
+        112
+      ],
+      "id": "9e38bfaf-ba12-49ec-8f58-674b328e6343",
+      "name": "Extract from File1"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"data\": {{ $json.data.split(\"\\n\") }}\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2848,
+        -48
+      ],
+      "id": "09901c80-91ec-47e4-a9e5-c7b57328ce48",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3072,
+        -48
+      ],
+      "id": "4cef85d5-3806-46c3-8470-336f25f6a761",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3456,
+        112
+      ],
+      "id": "8dd4eabf-0031-44d0-b444-761a4a4eedd9",
+      "name": "Split Ehole"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d648bb25-60a6-4750-b56e-dc008b312261",
+              "name": "url",
+              "value": "={{$json.data.split(\" \")[0]}}",
+              "type": "string"
+            },
+            {
+              "id": "572e8b36-13a1-43c5-87d9-1c2db8c0556c",
+              "name": "whatweb",
+              "value": "={{$json.data.split(\" \").slice(1,)}}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3264,
+        -48
+      ],
+      "id": "459908c1-a6f9-4bb5-97c8-42403a4b817b",
+      "name": "WhatWeb 拆分"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Group and merge WhatWeb data for the same URLs\ndef merge_whatweb_data(input_data):\n    # Dictionary to store merged data by URL\n    merged_data = {}\n    \n    for item in input_data:\n        url = item.json.get('url', '')\n        whatweb = item.json.get('whatweb', [])\n        \n        # Skip items without URL\n        if not url:\n            continue\n            \n        # If URL not in merged_data, add it\n        if url not in merged_data:\n            merged_data[url] = {\n                'url': url,\n                'whatweb': []\n            }\n        \n        # Merge WhatWeb data, avoiding duplicates\n        for entry in whatweb:\n            if entry not in merged_data[url]['whatweb']:\n                merged_data[url]['whatweb'].append(entry)\n    \n    # Convert back to the original format\n    result = []\n    for url, data in merged_data.items():\n        # Create a new item with merged data\n        new_item = {\n            'url': data['url'],\n            'whatweb': data['whatweb']\n        }\n        result.append(new_item)\n    \n    return result\n\n# Process the input data\nmerged_results = merge_whatweb_data(_input.all())\n\n# Return the merged results\nreturn merged_results"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3456,
+        -48
+      ],
+      "id": "cf9cf5fe-1a4a-4f9d-b4bc-d05a4bd2b056",
+      "name": "Code in Python (Beta)"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "Tazg0ZJKM2hiJ1yK",
+          "mode": "list",
+          "cachedResultName": "Chaos",
+          "cachedResultUrl": "/projects/i2ey4dzUVbg497kL/datatables/Tazg0ZJKM2hiJ1yK"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Sub_live",
+              "keyValue": "={{ $json.url }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Sub_live": "={{ $json.url }}",
+            "Ehole": "=Title:{{ $json.title }}\nCMS:{{ $json.cms }}\nServer:{{ $json.server }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Ehole",
+              "displayName": "Ehole",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "WhatWeb",
+              "displayName": "WhatWeb",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "Sub_live",
+              "displayName": "Sub_live",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        3664,
+        112
+      ],
+      "id": "37ec9a38-2259-4c8e-a4d8-1d1a355b9688",
+      "name": "Upsert row(s)"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "Tazg0ZJKM2hiJ1yK",
+          "mode": "list",
+          "cachedResultName": "Chaos",
+          "cachedResultUrl": "/projects/i2ey4dzUVbg497kL/datatables/Tazg0ZJKM2hiJ1yK"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Sub_live",
+              "keyValue": "={{ $json.url }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Sub_live": "={{ $json.url }}",
+            "WhatWeb": "={{ $json.whatweb.toJsonString() }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Ehole",
+              "displayName": "Ehole",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "WhatWeb",
+              "displayName": "WhatWeb",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Sub_live",
+              "displayName": "Sub_live",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        3664,
+        -48
+      ],
+      "id": "dd0a5256-d4b9-455d-a0f3-53aacea70a6c",
+      "name": "Upsert row(s)1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Day 一周": {
+      "main": [
+        [
+          {
+            "node": "获取Chaos索引",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取Chaos索引": {
+      "main": [
+        [
+          {
+            "node": "响应解析",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "响应解析": {
+      "main": [
+        [
+          {
+            "node": "数组拆分",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "数组拆分": {
+      "main": [
+        [
+          {
+            "node": "只要Bounty+存在资产的",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取ZIP": {
+      "main": [
+        [
+          {
+            "node": "解压ZIP",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "解压ZIP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解压ZIP": {
+      "main": [
+        [
+          {
+            "node": "查看域名并去重",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "只要Bounty+存在资产的": {
+      "main": [
+        [
+          {
+            "node": "获取ZIP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "查看域名并去重": {
+      "main": [
+        [
+          {
+            "node": "获取根域名",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取根域名": {
+      "main": [
+        [
+          {
+            "node": "根域名数据处理",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "根域名数据处理": {
+      "main": [
+        [
+          {
+            "node": "SubFinder子域名",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SubFinder子域名": {
+      "main": [
+        [
+          {
+            "node": "子域名测活",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "子域名测活": {
+      "main": [
+        [
+          {
+            "node": "WhatWeb技术栈",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Ehole技术栈",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'XSS'",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "WhatWeb技术栈",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Ehole技术栈",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call 'XSS'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ehole技术栈": {
+      "main": [
+        [
+          {
+            "node": "处理Ehole保存路径",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatWeb技术栈": {
+      "main": [
+        [
+          {
+            "node": "Read WhatWeb",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "处理Ehole保存路径": {
+      "main": [
+        [
+          {
+            "node": "Read Ehole",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read WhatWeb": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Ehole": {
+      "main": [
+        [
+          {
+            "node": "Extract from File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File1": {
+      "main": [
+        [
+          {
+            "node": "Split Ehole",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Ehole": {
+      "main": [
+        [
+          {
+            "node": "Upsert row(s)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "WhatWeb 拆分",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatWeb 拆分": {
+      "main": [
+        [
+          {
+            "node": "Code in Python (Beta)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in Python (Beta)": {
+      "main": [
+        [
+          {
+            "node": "Upsert row(s)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "bdd3b32f-b00f-4a69-9c02-8f4d75f8d632",
+  "meta": {
+    "instanceId": "31c614437b5591b68cf6dff1df3a6d23fa686ecf4d5bd98eb68bb818a2a39857"
+  },
+  "id": "bdMXvo9nBU7uj88B",
+  "tags": []
+}

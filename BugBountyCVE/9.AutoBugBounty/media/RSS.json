@@ -1,0 +1,523 @@
+{
+  "name": "RSS",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Rss获取\n"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -544,
+        -848
+      ],
+      "typeVersion": 1,
+      "id": "b9982e20-e599-4941-aad4-15391a30ce76",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# 定义URL列表\nurls = [\n    \"https://govuln.com/news/feed/7d0caab64fdec1ca\",  # p神 rss订阅\n    \"https://morss.it/:items=||*[class=research1_item-large]/https://www.assetnote.io/resources/research\",  # assetnote 最新研究1\n    \"https://morss.it/:proxy:items=||*[class=research1_featured-item%20w-inline-block]/https://www.assetnote.io/resources/research\",  # assetnote 最新研究2\n    \"https://morss.it/:items=||*[class=resources-card-padding-1]/https://www.assetnote.io/resources/research\",\n    \"https://morss.it/:proxy:items=||*[class=blog-article-card%20col-span-1]/https://blog.voorivex.team/newsletter\",  # oauth大手子\n    \"https://morss.it/:proxy:items=||*[class=archive__item]/https://zhero-web-sec.github.io/research-and-things/\"\n]\n\n# 将URL列表转换为所需的JSON格式\nresult = [{\"url\": url} for url in urls]\n\n# 添加新字段\nfor item in result:\n    item[\"myNewField\"] = 1\n\n# 返回结果\nreturn result"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -208,
+        -800
+      ],
+      "id": "fe76c095-2e41-414e-88e8-787629ceba25",
+      "name": "Rss数据源"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        16,
+        -800
+      ],
+      "id": "6ee84992-3cce-4c08-8809-af848f23048b",
+      "name": "RSS Read"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "asF6NUvTQJqiUdhM",
+          "mode": "list",
+          "cachedResultName": "RSS",
+          "cachedResultUrl": "/projects/i2ey4dzUVbg497kL/datatables/asF6NUvTQJqiUdhM"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "title",
+              "keyValue": "={{ $json.title }}"
+            },
+            {
+              "keyName": "link",
+              "keyValue": "={{ $json.link }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "title": "={{ $json.title }}",
+            "link": "={{ $json.link }}",
+            "summary": "={{$json.summary}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "link",
+              "displayName": "link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -800
+      ],
+      "id": "2868698d-f3a8-445b-8ba4-164a1d0e0623",
+      "name": "插入Rss"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e1adabb3-cd19-432b-b549-19ddce3a7d9e",
+              "leftValue": "={{ $json.createdAt }}",
+              "rightValue": "={{ $('1 Day').item.json.timestamp }}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        464,
+        -800
+      ],
+      "id": "bc8a3f5b-05dc-48f1-b002-50435fcc5a34",
+      "name": "根据数据库Row创建时间和运行时间比较判断是否为新文章"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Title：{{ $json.title }}\nLink:{{ $json.link }}\nSummary:{{ $json.summary }}",
+        "options": {
+          "systemMessage": "=你是一个为精英漏洞赏金猎人服务的网络安全情报分析器。你分析文章内容并返回结构良好、适用于Discord的评估报告，重点突出高利用价值。\n\n**输入格式**\nTitle: {{ $json.title }}\nSummary: {{ $json.summary }}\nLink: {{ $json.link }}\n\n**你的工作流程**\n1. 首次请求时使用Tool：Http Qequest工具请求文章{{ $json.link }} 获取文章内容\n2. 收到完整文章内容后根据Title+Summary+文章内容执行分析\n\n**核心任务**\n判断文章内容与漏洞赏金狩猎的相关性，聚焦：\n✓ 是否揭示可测试的攻击向量\n✓ 是否暴露新型漏洞模式\n✓ 是否包含可复用的测试策略\n✓ 是否影响主流赏金目标技术栈\n\n**输出规则**\n▸ 格式必须兼容Discord Markdown\n▸ 总响应不超过5行\n▸ 使用粗体标记关键术语：*攻击向量*\n▸ 链接格式：[显示文本](URL)\n▸ 对相关性保持绝对诚实\n\n**必需输出格式**\n## Article: [标题](文章链接)  \n🎯 漏洞赏金相关性: 高/中/低/无  \n\n[1-2行精准分析]\n• 核心漏洞模式（列出技术变体：如next.js/next_js/next-js/nextjs）\n• 可测试性评估（远程/本地/需凭证）  \n\n策略: [具体可操作测试方法]\n\n**示例输出**\n## Article: [API密钥泄露新趋势](https://example.com)  \n🎯 漏洞赏金相关性: 高  \n\n第三方SDK（变体：sdk_provider, sdk-provider）硬编码密钥漏洞，允许未授权访问云存储（AWS S3/Azure Blob）。  \n\n策略: 扫描JavaScript文件中的新SDK模式；批量测试*.cloudstorage[.]com子域权限  \n\n**低相关性示例**  \n## Article: [防火墙配置指南](https://example.com)  \n🎯 漏洞赏金相关性: 无  \n\n企业网络设备深度防御方案，需物理访问控制台且无外部攻击面。  \n\n策略: 跳过——仅适用于内部基础设施加固  \n\n**关键思维框架**\n→ 猎人能否直接应用此攻击链？\n→ 是否暴露了常见目标的盲点？\n→ 哪些测试模块可移植到其他目标？\n→ 是否值得优先研究？"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        672,
+        -992
+      ],
+      "id": "80740450-9fac-4064-bc7d-5011f1449fe1",
+      "name": "AI Agent",
+      "retryOnFail": true,
+      "alwaysOutputData": true,
+      "waitBetweenTries": 2000
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+      "typeVersion": 1,
+      "position": [
+        672,
+        -1216
+      ],
+      "id": "e4a6db6b-e777-4911-a6e8-970eb2f199d5",
+      "name": "DeepSeek Chat Model",
+      "credentials": {
+        "deepSeekApi": {
+          "id": "fTTpviO3hN1GVs4m",
+          "name": "DeepSeek account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "=先对Request_LINK{{$json.link}}进行请求，然后让AI分析文章内容\nMakes an HTTP request and returns the response data",
+        "url": "={{ $json.link }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.3,
+      "position": [
+        816,
+        -1216
+      ],
+      "id": "f71de218-ac01-4ac2-830e-6d9c7f89d328",
+      "name": "HTTP Request",
+      "notes": "先对Request_LINK{{$json.link}}进行请求，然后然后给AI，然后让AI根据Title linke 和文章内容和Summary进行分析\nMakes an HTTP request and returns the response data"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "6e67348a-b527-4587-86ff-befb94558a37",
+              "leftValue": "={{ $json.output }}",
+              "rightValue": "相关性\\**\\s*:\\s*\\**\\s*高",
+              "operator": {
+                "type": "string",
+                "operation": "regex"
+              }
+            },
+            {
+              "id": "7d9fe2b1-8132-43ae-876c-ab4788aabafb",
+              "leftValue": "={{ $json.output }}",
+              "rightValue": "相关性\\**\\s*:\\s*\\**\\s*中",
+              "operator": {
+                "type": "string",
+                "operation": "regex"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        992,
+        -816
+      ],
+      "id": "f5e6b90a-9d6f-41cc-9173-ee554b098669",
+      "name": "判断是否为高价值文章"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        1248,
+        -928
+      ],
+      "id": "bc8ef03d-96b0-4830-bbbd-b5093982d1cb",
+      "name": "Discord",
+      "webhookId": "424b9d74-0b5e-4bc7-8b64-e86aefe5b7a5",
+      "retryOnFail": true,
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "VtKUwydqftlEgCSA",
+          "name": "Rss"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import re\n\n# Loop over input items and parse the output field into structured data\nfor item in _input.all():\n    output_text = item.json.get(\"output\", \"\")\n    lines = [line.strip() for line in output_text.split('\\n') if line.strip()]\n    \n    # Initialize variables\n    article = \"\"\n    link = \"\"\n    severity = \"\"\n    bounty_relevance = \"\"\n    description = \"\"\n    fingerprint = \"\"\n    \n    # Process each line\n    for i, line in enumerate(lines):\n        # Extract article and link from first line\n        if i == 0 and \"Article:\" in line:\n            # Use regex to extract article title and link\n            article_match = re.search(r'Article:\\s*\\[(.*?)\\]\\((.*?)\\)', line)\n            if article_match:\n                article = article_match.group(1).strip()\n                link = article_match.group(2).strip()\n        \n        # Extract bounty relevance\n        elif \"🎯\" in line and \"漏洞赏金相关性:\" in line:\n            # Extract the relevance level (高/中/低)\n            bounty_match = re.search(r'漏洞赏金相关性:\\s*[*]*\\s*([^\\s*]+)', line)\n            if bounty_match:\n                bounty_relevance = bounty_match.group(1).strip()\n        \n        # Extract description (main content)\n        elif (not line.startswith(\"Article:\") and \n              \"🎯\" not in line and \n              \"策略:\" not in line and\n              not re.match(r'^https?://', line)):\n            if description:\n                description += \" \" + line\n            else:\n                description = line\n    \n    # Extract fingerprint/variants from description using variant pattern\n    variant_match = re.search(r'（变体：([^）]+)）', description)\n    if variant_match:\n        fingerprint = variant_match.group(1).strip()\n    \n    # Clean up description by removing markdown formatting\n    if description:\n        description = re.sub(r'\\*\\*([^*]+)\\*\\*', r'\\1', description)  # Remove **bold**\n        description = re.sub(r'\\*([^*]+)\\*', r'\\1', description)     # Remove *italic*\n        description = re.sub(r'`([^`]+)`', r'\\1', description)         # Remove `code`\n        description = re.sub(r'\\s+', ' ', description).strip()\n    \n    # Add structured fields to the item\n    item.json.update({\n        \"article\": article,\n        \"link\": link,\n        \"severity\": severity,\n        \"bounty_relevance\": bounty_relevance,\n        \"description\": description,\n        \"fingerprint\": fingerprint\n    })\n\nreturn _input.all()"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1248,
+        -704
+      ],
+      "id": "c2a2c4fe-57f2-4508-a234-9fa251dba9c4",
+      "name": "FingerPrint提取",
+      "alwaysOutputData": true,
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "picntNidQXWCksoH",
+          "mode": "list",
+          "cachedResultUrl": "/workflow/picntNidQXWCksoH",
+          "cachedResultName": "资产匹配推送"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "CVE-ID": "null",
+            "Title": "={{ $json.article }}",
+            "Link": "={{ $json.link }}",
+            "FingerPrint": "={{ $json.fingerprint }}",
+            "Summary": "={{ $json.description }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "CVE-ID",
+              "displayName": "CVE-ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "FingerPrint",
+              "displayName": "FingerPrint",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "Summary",
+              "displayName": "Summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        1792,
+        -704
+      ],
+      "id": "efca801a-2b00-4f84-bc14-e42319a1b0bf",
+      "name": "Call '资产匹配推送'"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -432,
+        -800
+      ],
+      "id": "cf0361fa-793a-4f7a-af39-1f4d94386e79",
+      "name": "1 Day"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Rss数据源": {
+      "main": [
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "插入Rss",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "插入Rss": {
+      "main": [
+        [
+          {
+            "node": "根据数据库Row创建时间和运行时间比较判断是否为新文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "根据数据库Row创建时间和运行时间比较判断是否为新文章": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepSeek Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "判断是否为高价值文章",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判断是否为高价值文章": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "FingerPrint提取",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FingerPrint提取": {
+      "main": [
+        [
+          {
+            "node": "Call '资产匹配推送'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1 Day": {
+      "main": [
+        [
+          {
+            "node": "Rss数据源",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "fb4314a5-47da-416a-9cb5-ede57e01a5e5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "31c614437b5591b68cf6dff1df3a6d23fa686ecf4d5bd98eb68bb818a2a39857"
+  },
+  "id": "HGTggKwLODkeFQou",
+  "tags": []
+}

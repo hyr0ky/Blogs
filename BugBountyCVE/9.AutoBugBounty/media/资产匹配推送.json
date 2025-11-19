@@ -1,0 +1,304 @@
+{
+  "name": "资产匹配推送",
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"CVE-ID\":\"\",\n  \"Title\":\"\",\n  \"Link\":\"\",\n  \"FingerPrint\":\"\",\n  \"Summary\":\"\"\n}"
+      },
+      "id": "c055762a-8fe7-4141-a639-df2372f30060",
+      "typeVersion": 1.1,
+      "name": "Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        -160,
+        352
+      ]
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "result = []\nfor item in _input.all():\n  FingerPrintArray = item.json.get(\"FingerPrint\",\"\").split(\",\")\n  Title = item.json.get(\"Title\",\"\")\n  CVE_ID  = item.json.get(\"CVE-ID\",\"\")\n  Link  = item.json.get(\"Link\",\"\")\n  Summary = item.json.get(\"Summary\",\"\")\n\n  for finger in FingerPrintArray:\n    new_json ={\n      \"CVE-ID\":CVE_ID,\n      \"Title\":Title,\n      \"Link\":Link,\n      \"FingerPrint\":finger,\n      \"Summary\":Summary\n    }\n\n    result.append(new_json)\n  \nreturn result"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        48,
+        352
+      ],
+      "id": "06f68e56-4981-4b05-acde-f65e5c7bd939",
+      "name": "Finger分割"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "wYtVH5wgqjjYc8Ai",
+          "mode": "list",
+          "cachedResultName": "FoFa",
+          "cachedResultUrl": "/projects/i2ey4dzUVbg497kL/datatables/wYtVH5wgqjjYc8Ai"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "title",
+              "condition": "ilike",
+              "keyValue": "={{ $json.FingerPrint }}"
+            },
+            {
+              "keyName": "os",
+              "condition": "ilike",
+              "keyValue": "={{ $json.FingerPrint }}"
+            },
+            {
+              "keyName": "server",
+              "condition": "ilike",
+              "keyValue": "={{ $json.FingerPrint }}"
+            },
+            {
+              "keyName": "product",
+              "condition": "ilike",
+              "keyValue": "={{ $json.FingerPrint }}"
+            },
+            {
+              "keyName": "version",
+              "condition": "ilike",
+              "keyValue": "={{ $json.FingerPrint }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        240,
+        208
+      ],
+      "id": "6106e471-2763-4a8a-b8dc-208887aae0e1",
+      "name": "FoFa资产匹配"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "Tazg0ZJKM2hiJ1yK",
+          "mode": "list",
+          "cachedResultName": "Chaos",
+          "cachedResultUrl": "/projects/i2ey4dzUVbg497kL/datatables/Tazg0ZJKM2hiJ1yK"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Ehole",
+              "condition": "ilike",
+              "keyValue": "={{ $json.FingerPrint }}"
+            },
+            {
+              "keyName": "WhatWeb",
+              "condition": "ilike",
+              "keyValue": "={{ $json.FingerPrint }}"
+            }
+          ]
+        },
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        240,
+        416
+      ],
+      "id": "6bdd393b-ff3f-496a-8cde-83ec84c13305",
+      "name": "AutoChaos"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=### FOFA匹配成功\n- Fingerprint: **{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['FingerPrint']}}**\n- CVE：**{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['CVE-ID']}}**\n- Title：**{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['Title']}}**\n- Summary：{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['Summary']}}\n- Link：{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['Link']}}",
+        "options": {},
+        "files": {
+          "values": [
+            {
+              "inputFieldName": "Data"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        784,
+        208
+      ],
+      "id": "2b6cbb95-3bf5-4c63-8369-9e92ee3b0b89",
+      "name": "Discord",
+      "webhookId": "4cfe7381-fc44-4fe4-879f-6a48c09cf434",
+      "retryOnFail": true,
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "RyXyfvITVeZb1Y8a",
+          "name": "资产匹配-n8n"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "binaryPropertyName": "Data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        544,
+        208
+      ],
+      "id": "49ec9368-f600-4e1b-aed8-7c3f14e7bc3c",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=### Chaos匹配成功\n- Fingerprint: **{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['FingerPrint']}}**\n- CVE：**{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['CVE-ID']}}**\n- Title：**{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['Title']}}**\n- Summary：{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['Summary']}}\n- Link：{{ $('Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据').item.json['Link']}}",
+        "options": {},
+        "files": {
+          "values": [
+            {
+              "inputFieldName": "Data"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        784,
+        416
+      ],
+      "id": "0aaa2d12-cce2-4dfb-bb18-88050b53f8e4",
+      "name": "Discord1",
+      "webhookId": "4cfe7381-fc44-4fe4-879f-6a48c09cf434",
+      "retryOnFail": true,
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "RyXyfvITVeZb1Y8a",
+          "name": "资产匹配-n8n"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "binaryPropertyName": "Data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        544,
+        416
+      ],
+      "id": "d9e1468d-cd99-4d9b-a9d7-5f7d6ec75c29",
+      "name": "Convert to File1"
+    }
+  ],
+  "pinData": {
+    "Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据": [
+      {
+        "json": {
+          "CVE-ID": null,
+          "Title": null,
+          "Link": null,
+          "FingerPrint": "next.js,next-js,next/js",
+          "Summary": null
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Rss和CVE资产匹配 FoFa库和AutoChaos库时进行推送数据": {
+      "main": [
+        [
+          {
+            "node": "Finger分割",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Finger分割": {
+      "main": [
+        [
+          {
+            "node": "FoFa资产匹配",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AutoChaos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FoFa资产匹配": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File1": {
+      "main": [
+        [
+          {
+            "node": "Discord1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AutoChaos": {
+      "main": [
+        [
+          {
+            "node": "Convert to File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4d17f91c-3be2-4930-af01-1c6b9dddbbb2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "31c614437b5591b68cf6dff1df3a6d23fa686ecf4d5bd98eb68bb818a2a39857"
+  },
+  "id": "picntNidQXWCksoH",
+  "tags": []
+}

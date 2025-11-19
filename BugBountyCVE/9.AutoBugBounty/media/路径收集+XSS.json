@@ -1,0 +1,970 @@
+{
+  "name": "路径收集+XSS",
+  "nodes": [
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=gau  {{ $node[\"Call\"].json[\"domain\"] }} --proxy http://127.0.0.1:7890 > ./info/gau_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -1680,
+        -1328
+      ],
+      "id": "271a8f33-72ab-4a10-abc0-a6f4c355e011",
+      "name": "Gau",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/subs_live_{{ $node[\"Call\"].json[\"domain\"] }}.txt | hakrawler -subs > ./info/hakrawler_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -1456,
+        -1328
+      ],
+      "id": "bf55076c-386a-401c-90c5-337d0cd4c7e1",
+      "name": "Hakrawler",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/subs_live_{{ $node[\"Call\"].json[\"domain\"] }}.txt | katana -sc -kf robotstxt.sitemapxml -jc -c 50 > ./info/katana_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -1232,
+        -1328
+      ],
+      "id": "c44e3ddf-a017-44cb-a905-ba06a0b1bcc9",
+      "name": "Katana",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/*_spider_{{ $node[\"Call\"].json[\"domain\"] }}.txt >> ./info/urls_0_{{ $node[\"Call\"].json[\"domain\"] }}.txt  &&  cat ./info/urls_0_{{ $node[\"Call\"].json[\"domain\"] }}.txt | grep -iv \"\\.(js|svg|css|png|mp3|mp4|jpg)\"| MoreFind dedu --smart -t 1 >./info/urls_1_{{ $node[\"Call\"].json[\"domain\"] }}.txt && sort -u ./info/urls_1_{{ $node[\"Call\"].json[\"domain\"] }}.txt > ./info/urls_{{ $node[\"Call\"].json[\"domain\"] }}.txt"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -1008,
+        -1328
+      ],
+      "id": "ea3d8ff8-6489-4476-a7cc-350867044cc5",
+      "name": "路径去重",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "fileSelector": "=./info/subs_{{ $node[\"Call\"].json[\"domain\"] }}.txt",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        560,
+        -1328
+      ],
+      "id": "27106db3-5773-4b8a-aa1c-4e50a48d9c0f",
+      "name": "读取子域名",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "options": {
+          "keepSource": "both"
+        }
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        784,
+        -1328
+      ],
+      "id": "0efbcc55-d8f6-4bea-bcff-6f542e2dfd1e",
+      "name": "解析子域名文件",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"domain\":\"domain\"\n}"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1904,
+        -1328
+      ],
+      "id": "02532c93-fb77-4a44-a2bf-72972de68a90",
+      "name": "Call"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "Domain",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        336,
+        -1328
+      ],
+      "id": "f91a03be-afed-4b15-9c34-5a0ae0569411",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/urls_{{ $node[\"Call\"].json[\"domain\"] }}.txt | unfurl paths |sed 's/^.//' | sort -u |egrep -iv \".(jpg|swf|mp3|mp4)\" | tee ./info/paths_{{ $node[\"Call\"].json[\"domain\"] }}.txt ; echo 1"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        -1392
+      ],
+      "id": "9dc757a7-ac5c-4a39-aa56-8f40470e8be6",
+      "name": "路径收集",
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=cat ./info/urls_{{ $node[\"Call\"].json[\"domain\"] }}.txt  | unfurl keys | sort -u | tee ./info/params_{{ $node[\"Call\"].json[\"domain\"] }}.txt ;  echo 1"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -784,
+        -1200
+      ],
+      "id": "aec68738-70c0-4a22-9eb4-822803f0766f",
+      "name": "参数收集",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "fileSelector": "=./info/paths_{{ $node[\"Call\"].json[\"domain\"] }}.txt",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        -336,
+        -1392
+      ],
+      "id": "e8fcb4e3-0d88-40e0-9a72-a47ec08c9942",
+      "name": "读取路径",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "fileSelector": "=./info/params_{{ $node[\"Call\"].json[\"domain\"] }}.txt",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        -1200
+      ],
+      "id": "4ad52641-fc1e-413a-bd21-c4009bfd306a",
+      "name": "读取参数",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "options": {
+          "keepSource": "both"
+        }
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -336,
+        -1200
+      ],
+      "id": "36027fbb-3116-4691-80e2-d8868b94651f",
+      "name": "解析参数文件",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "84a472ec-c2a0-40df-870c-7bbdbb46af16",
+              "name": "DATA",
+              "value": "={{ $json.data.split(\"\\n\") }}",
+              "type": "array"
+            },
+            {
+              "id": "d7de49a5-8177-4b7f-b85b-e73585c24743",
+              "name": "Domain",
+              "value": "={{ $json.fileName.slice(7,-4) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -112,
+        -1200
+      ],
+      "id": "4cc283c2-c837-449e-9e39-bcee6c50ad80",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "n = 13  # 每组参数的数量\nxss = \"1z%27z%22z%3cz%2fz123%5cx\"  # XSS测试Payload\n\nfor item in _input.all():\n    parameters = item.json.get(\"DATA\", [])\n    \n    # 为每个item单独创建payload列表\n    generated_payloads = []\n    out = \"\"\n    \n    for num, parameter in enumerate(parameters, start=1):\n        # 跳过空参数\n        if not parameter or parameter.strip() == \"\":\n            continue\n            \n        current_num = (num - 1) % n + 1  # 将 num 的范围调整为 1 到 n\n        out += f\"{parameter}={xss}{current_num}&\"\n        \n        if num % n == 0:\n            # 每50个参数输出一次，移除末尾的&\n            generated_payloads.append(out[:-1])\n            out = \"\"\n    \n    # 处理剩余参数（不足50个的情况）\n    if out:\n        generated_payloads.append(out[:-1])\n    \n    # 将生成的payload添加到当前item\n    item.json[\"generatedPayloads\"] = generated_payloads\n    item.json[\"DATA\"] = []\nreturn _input.all()"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        112,
+        -1200
+      ],
+      "id": "38c8df60-6a4d-436a-9bca-20f26ca3864e",
+      "name": "生成XSS-Payload"
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "options": {
+          "keepSource": "both"
+        }
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -112,
+        -1392
+      ],
+      "id": "00b5299c-f09f-4a67-bf9b-351a9ed2e540",
+      "name": "解析路径文件",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "84a472ec-c2a0-40df-870c-7bbdbb46af16",
+              "name": "Dir",
+              "value": "={{ $json.data.split(\"\\n\") }}",
+              "type": "array"
+            },
+            {
+              "id": "d7de49a5-8177-4b7f-b85b-e73585c24743",
+              "name": "Domain",
+              "value": "={{ $json.fileName.slice(6,-4) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        112,
+        -1392
+      ],
+      "id": "245bdf9e-f9d8-4819-8160-4ff2d5a656dc",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "84a472ec-c2a0-40df-870c-7bbdbb46af16",
+              "name": "subdomain",
+              "value": "={{ $json.data.split(\"\\n\") }}",
+              "type": "array"
+            },
+            {
+              "id": "d7de49a5-8177-4b7f-b85b-e73585c24743",
+              "name": "Domain",
+              "value": "={{ $json.fileName.slice(5,-4) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1040,
+        -1520
+      ],
+      "id": "584f450a-e6cd-4ad5-97e0-31504034c085",
+      "name": "Subdomain Json"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "subdomain",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1248,
+        -1520
+      ],
+      "id": "5325b722-cb04-4563-bdf7-ba1db58471d6",
+      "name": "Split Subdomain"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9c6490fc-c7b7-4bba-b367-67a764d5a2b1",
+              "leftValue": "={{$json.data}}",
+              "rightValue": "z'z",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "1c74afb1-880f-45b5-8523-d72f0e8989cc",
+              "leftValue": "={{$json.data}}",
+              "rightValue": "z\"z",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "bdd63ff0-1c48-4f3b-a933-fbab53b45340",
+              "leftValue": "={{$json.data}}",
+              "rightValue": "z>z",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "4c79f390-a8a4-4671-9891-f3d862b22ae0",
+              "leftValue": "={{$json.data}}",
+              "rightValue": "z<z",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "f36e2ce9-1bf8-4b61-a84e-3bd2b9e0961a",
+              "leftValue": "={{$json.data}}",
+              "rightValue": "z/z",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2160,
+        -960
+      ],
+      "id": "1589a23f-ce86-4b2a-8ce8-921df69a223d",
+      "name": "判断XSS"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=### Find XSS:\n - **Link**: `https://{{ $('Loop Dir').item.json.SubDir }}?{{ $('Loop Xss').item.json.Xss }}`",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        2432,
+        -976
+      ],
+      "id": "4c25de7f-89e5-445a-ba6a-64d2c96aef80",
+      "name": "xss-n8n",
+      "webhookId": "528bea8d-8495-43ac-be3f-a8b0d7229988",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "hOJQRrveSztGvyRI",
+          "name": "xss-n8n"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "Dir",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1936,
+        -1504
+      ],
+      "id": "672fd5d6-86a9-4951-bdc7-6135b9c860ed",
+      "name": "Split Dir"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "74003d92-9129-4654-bbe1-e8c3f1b43012",
+              "name": "Dir",
+              "value": "={{ $('Merge').item.json.Dir }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1728,
+        -1504
+      ],
+      "id": "c053360e-8467-4b04-b2db-a9c29b629a1e",
+      "name": "Dir Loop"
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $('Loop Dir').item.json.SubDir }}?{{ $json.Xss }}",
+        "options": {
+          "response": {
+            "response": {}
+          },
+          "timeout": 30000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1904,
+        -960
+      ],
+      "id": "092cc9fd-a46f-4c20-9fc8-21b581434849",
+      "name": "HTTP Request",
+      "retryOnFail": true,
+      "alwaysOutputData": false,
+      "maxTries": 3,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "57196d3a-321c-4fc9-a126-ebc2004b3079",
+              "name": "SubDir",
+              "value": "={{ $('Loop Subdomain').item.json.subdomain }}/{{ $json.Dir }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2192,
+        -1504
+      ],
+      "id": "75dd2a50-f5aa-49bf-88c1-901af6bbcf2f",
+      "name": "Sub+Dir"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ea55f789-9955-4677-924d-8d93adbd671d",
+              "name": "Xss",
+              "value": "={{ $('Merge').item.json.generatedPayloads }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1808,
+        -1216
+      ],
+      "id": "2b3d0fda-b39d-4969-a4ef-0e3c90e2413a",
+      "name": "XssPayload获取"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "Xss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        -1216
+      ],
+      "id": "0d24f035-3b73-4a8f-b602-da29ab3d53d3",
+      "name": "Split Xss"
+    },
+    {
+      "parameters": {
+        "batchSize": "=1",
+        "options": {
+          "reset": false
+        }
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1472,
+        -1520
+      ],
+      "id": "a6117723-d3f9-48f8-b950-93a7e1809e6d",
+      "name": "Loop Subdomain",
+      "executeOnce": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": "={{ $('Loop Dir').context['done'] }}"
+        }
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1584,
+        -1232
+      ],
+      "id": "0887f25a-9d23-4a11-abf6-30f4928f5da1",
+      "name": "Loop Dir"
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": "={{ $('Loop Xss').context['done'] }}"
+        }
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1648,
+        -976
+      ],
+      "id": "a9b71889-0918-4121-8bf3-927d98affe57",
+      "name": "Loop Xss"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Gau": {
+      "main": [
+        [
+          {
+            "node": "Hakrawler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hakrawler": {
+      "main": [
+        [
+          {
+            "node": "Katana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "路径去重": {
+      "main": [
+        [
+          {
+            "node": "路径收集",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "参数收集",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "读取子域名": {
+      "main": [
+        [
+          {
+            "node": "解析子域名文件",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解析子域名文件": {
+      "main": [
+        [
+          {
+            "node": "Subdomain Json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call": {
+      "main": [
+        [
+          {
+            "node": "Gau",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "路径收集": {
+      "main": [
+        [
+          {
+            "node": "读取路径",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "参数收集": {
+      "main": [
+        [
+          {
+            "node": "读取参数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "读取子域名",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "读取路径": {
+      "main": [
+        [
+          {
+            "node": "解析路径文件",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "读取参数": {
+      "main": [
+        [
+          {
+            "node": "解析参数文件",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解析参数文件": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "生成XSS-Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "生成XSS-Payload": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "解析路径文件": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Subdomain Json": {
+      "main": [
+        [
+          {
+            "node": "Split Subdomain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Subdomain": {
+      "main": [
+        [
+          {
+            "node": "Loop Subdomain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判断XSS": {
+      "main": [
+        [
+          {
+            "node": "xss-n8n",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Xss",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xss-n8n": {
+      "main": [
+        [
+          {
+            "node": "Loop Xss",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Katana": {
+      "main": [
+        [
+          {
+            "node": "路径去重",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Dir": {
+      "main": [
+        [
+          {
+            "node": "Sub+Dir",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dir Loop": {
+      "main": [
+        [
+          {
+            "node": "Split Dir",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "判断XSS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sub+Dir": {
+      "main": [
+        [
+          {
+            "node": "Loop Dir",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XssPayload获取": {
+      "main": [
+        [
+          {
+            "node": "Split Xss",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Xss": {
+      "main": [
+        [
+          {
+            "node": "Loop Xss",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Subdomain": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Dir Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Dir": {
+      "main": [
+        [
+          {
+            "node": "Loop Subdomain",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "XssPayload获取",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Xss": {
+      "main": [
+        [
+          {
+            "node": "Loop Dir",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "7ef30da8-c2d6-4e00-963b-b487796b0869",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "31c614437b5591b68cf6dff1df3a6d23fa686ecf4d5bd98eb68bb818a2a39857"
+  },
+  "id": "cSTBZpR339oqXzsS",
+  "tags": []
+}

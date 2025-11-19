@@ -1,0 +1,454 @@
+{
+  "name": "FoFa",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "daysInterval": 3
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -832,
+        -32
+      ],
+      "id": "9ccfbbe7-1931-44e6-864e-01e0e98d7de2",
+      "name": "Day 3"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import base64\n\n# 定义Fofa测试列表\nfofa_query = _input.first().json.domain\n\n# 对每个查询进行 base64 编码\nresult = [{\"fofa_query\": base64.b64encode((\"host=\" + domain ).encode() ).decode()} for domain in fofa_query]\n\n\n# 返回结果\nreturn result"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        -32
+      ],
+      "id": "da70a9bc-b7bb-4598-a3e2-64e58c3a9b5b",
+      "name": "FoFa查询规则"
+    },
+    {
+      "parameters": {
+        "command": "cd ./Chaos ;cat *.txt | unfurl --unique apexes | MoreFind dedu"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -624,
+        -32
+      ],
+      "id": "a2cbf065-63b1-47b2-8359-5cd0958fda53",
+      "name": "查看域名并去重"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e703cb0f-9559-4e95-b0a8-b6a782e7859f",
+              "name": "domain",
+              "value": "={{$json.stdout.split(\"\\n\")}}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -416,
+        -32
+      ],
+      "id": "f62f52e7-aa12-49d0-8794-aceed3500597",
+      "name": "获取根域名"
+    },
+    {
+      "parameters": {
+        "url": "https://fofa.info/api/v1/search/all",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "ac5223e86edc59730d268f13b1a77a49"
+            },
+            {
+              "name": "qbase64",
+              "value": "={{ $json.fofa_query }}"
+            },
+            {
+              "name": "fields",
+              "value": "ip,port,protocol,domain,host,title,icp,asn,os,server,product,version,cert.subject.org"
+            },
+            {
+              "name": "size",
+              "value": "2000"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 5000
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        240,
+        -16
+      ],
+      "id": "52ab7dc5-d4f5-47e7-8f3a-76d900091720",
+      "name": "HTTP Request",
+      "retryOnFail": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# 定义CSV头部字段\nheaders = [\"ip\", \"port\", \"protocol\", \"domain\", \"host\", \"title\", \"icp\", \"asn\", \"os\", \"server\", \"product\", \"version\", \"cert_subject_org\"]\n\n# 收集所有results\nall_results = []\n\n# 遍历输入项并为每个项的JSON添加名为'myNewField'的新字段\nfor item in _input.all():\n    # 处理results数组并添加到总结果中\n    for result in item.json.results:\n        # 确保结果列表长度与headers一致\n        while len(result) < len(headers):\n            result.append(\"\")\n        \n        # 将列表转换为字典\n        result_dict = {}\n        for j, header in enumerate(headers):\n            if j < len(result):\n                result_dict[header] = result[j]\n            else:\n                result_dict[header] = \"\"\n        \n        # 添加myNewField字段\n        result_dict['query'] = item.json.query\n        \n        all_results.append(result_dict)\n\n# 返回所有处理后的results\nreturn all_results"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        -32
+      ],
+      "id": "79eea18f-a45e-4b05-ba97-bdd1c20b9150",
+      "name": "FoFa结果处理"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "value": "wYtVH5wgqjjYc8Ai",
+          "mode": "list",
+          "cachedResultName": "FoFa",
+          "cachedResultUrl": "/projects/i2ey4dzUVbg497kL/datatables/wYtVH5wgqjjYc8Ai"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "ip",
+              "keyValue": "={{ $json.ip }}"
+            },
+            {
+              "keyName": "host",
+              "keyValue": "={{ $json.host }}"
+            },
+            {
+              "keyName": "port",
+              "keyValue": "={{ $json.port }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "ip",
+              "displayName": "ip",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "port",
+              "displayName": "port",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "host",
+              "displayName": "host",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "domain",
+              "displayName": "domain",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "protocol",
+              "displayName": "protocol",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "isp",
+              "displayName": "isp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "asn",
+              "displayName": "asn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "os",
+              "displayName": "os",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "server",
+              "displayName": "server",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "product",
+              "displayName": "product",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "version",
+              "displayName": "version",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "fingerprint",
+              "displayName": "fingerprint",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "cert_subject_org",
+              "displayName": "cert_subject_org",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        656,
+        -32
+      ],
+      "id": "68e60d91-e9c1-4358-8cc3-a0317df0aded",
+      "name": "FoFa更新数据库"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -32,
+        -32
+      ],
+      "id": "eaddc50d-39cc-418c-9b41-b12946822d1e",
+      "name": "FoFa Loop"
+    }
+  ],
+  "pinData": {
+    "查看域名并去重": [
+      {
+        "json": {
+          "exitCode": 0,
+          "stderr": "",
+          "stdout": "baidu.com\nqq.com\nwps.cn\npaypal.com"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Day 3": {
+      "main": [
+        [
+          {
+            "node": "查看域名并去重",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "查看域名并去重": {
+      "main": [
+        [
+          {
+            "node": "获取根域名",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "获取根域名": {
+      "main": [
+        [
+          {
+            "node": "FoFa查询规则",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FoFa查询规则": {
+      "main": [
+        [
+          {
+            "node": "FoFa Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "FoFa结果处理",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FoFa结果处理": {
+      "main": [
+        [
+          {
+            "node": "FoFa更新数据库",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FoFa Loop": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FoFa更新数据库": {
+      "main": [
+        [
+          {
+            "node": "FoFa Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8f5fb2c5-4b7d-4e41-bca0-52f7d8183f03",
+  "meta": {
+    "instanceId": "31c614437b5591b68cf6dff1df3a6d23fa686ecf4d5bd98eb68bb818a2a39857"
+  },
+  "id": "z8EwEvefdzz0kOYA",
+  "tags": []
+}
