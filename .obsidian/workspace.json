@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.50244903564453
+    "width": 276.50244903564453,
+    "collapsed": true
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -180,15 +181,15 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "460a6ac6fb4eeea3",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
+    "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
+    "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
     "BugBountyCVE/9.AutoBugBounty/media/xss v2.json",
     "BugBountyCVE/9.AutoBugBounty/media/xss v2(1).json",
     "BugBountyCVE/9.AutoBugBounty/media/Pasted image 20251120005450.png",
     "BugBountyCVE/9.AutoBugBounty/media/53da1e43d723498a2e6a6fb431da0251.png",
     "README.md",
-    "BugBountyCVE/9.AutoBugBounty/0.n8n.md",
-    "BugBountyCVE/9.AutoBugBounty/1.nuclei-xss.md",
     "BugBountyCVE/9.AutoBugBounty/media/3cef00a32571ed32256643a067cce846.png",
     "BugBountyCVE/9.AutoBugBounty/media/8293cb74abb81fc49d1a76188e386145.png",
     "BugBountyCVE/9.AutoBugBounty/media/709cf0e6cdbe35ff5aa9c607da24e2c5.png",
@@ -225,7 +226,6 @@
     "安全研究/二进制漏洞/1.工具改造/1.改造模糊测试工具.md",
     "安全研究/二进制漏洞/0.基础/3.模糊测试工具基础使用.md",
     "安全研究/二进制漏洞/0.基础/2.ASAN原理解析.md",
-    "安全研究/二进制漏洞/4.漏洞复现",
     "BugBountyCVE/3.SSRF/0.基础总结.md",
     "安全研究/Chrome/资源.md"
   ]
