@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BugBountyCVE/10.文章翻译/交易所--身份验证和客户端错误.md",
+                "file": "BugBountyCVE/10.文章翻译/0.交易所--身份验证和客户端错误.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "交易所--身份验证和客户端错误"
+              "title": "0.交易所--身份验证和客户端错误"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BugBountyCVE/10.文章翻译/交易所--身份验证和客户端错误.md",
+                "file": "BugBountyCVE/10.文章翻译/0.交易所--身份验证和客户端错误.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "交易所--身份验证和客户端错误 的大纲"
+              "title": "0.交易所--身份验证和客户端错误 的大纲"
             }
           },
           {
@@ -180,7 +180,7 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "881acb3e561cb818",
+  "active": "f372037950b1788e",
   "lastOpenFiles": [
     "BugBountyCVE/10.文章翻译/media/Pasted image 20251127041931.png",
     "BugBountyCVE/10.文章翻译/media/Pasted image 20251127041901.png",
@@ -192,7 +192,7 @@
     "BugBountyCVE/10.文章翻译/media/Pasted image 20251127005628.png",
     "BugBountyCVE/10.文章翻译/media",
     "安全开发💻/Go开发/1.web开发/3.会话、中间件.md",
-    "BugBountyCVE/10.文章翻译/交易所--身份验证和客户端错误.md",
+    "BugBountyCVE/10.文章翻译/0.交易所--身份验证和客户端错误.md",
     "BugBountyCVE/10.文章翻译",
     "杂/test.md",
     "杂/黑苹果.md",
