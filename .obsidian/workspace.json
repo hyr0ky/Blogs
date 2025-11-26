@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "安全开发💻/Go开发/1.web开发/3.会话、中间件.md",
+                "file": "BugBountyCVE/10.文章翻译/交易所--身份验证和客户端错误.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.会话、中间件 的大纲"
+              "title": "交易所--身份验证和客户端错误 的大纲"
             }
           },
           {
@@ -165,7 +165,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 243.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,8 +180,13 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "f372037950b1788e",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
+    "BugBountyCVE/10.文章翻译/media/Pasted image 20251127041931.png",
+    "BugBountyCVE/10.文章翻译/media/Pasted image 20251127041901.png",
+    "BugBountyCVE/10.文章翻译/media/Pasted image 20251127030051.png",
+    "BugBountyCVE/10.文章翻译/media/Pasted image 20251127025809.png",
+    "BugBountyCVE/10.文章翻译/media/Pasted image 20251127025232.png",
     "BugBountyCVE/10.文章翻译/media/Pasted image 20251127011437.png",
     "BugBountyCVE/10.文章翻译/media/Pasted image 20251127005905.png",
     "BugBountyCVE/10.文章翻译/media/Pasted image 20251127005628.png",
@@ -201,17 +206,12 @@
     "BugBountyCVE/9.AutoBugBounty/media/Pasted image 20251120005450.png",
     "BugBountyCVE/9.AutoBugBounty/media/53da1e43d723498a2e6a6fb431da0251.png",
     "BugBountyCVE/9.AutoBugBounty/media/3cef00a32571ed32256643a067cce846.png",
-    "BugBountyCVE/9.AutoBugBounty/media/8293cb74abb81fc49d1a76188e386145.png",
-    "BugBountyCVE/9.AutoBugBounty/media/709cf0e6cdbe35ff5aa9c607da24e2c5.png",
-    "BugBountyCVE/9.AutoBugBounty/media/f38d87abead28df48cc5a7fd4b8a51a1.png",
-    "BugBountyCVE/9.AutoBugBounty/media/ad75d7b6bd7e88943294c43d518288db.png",
     "BugBountyCVE/9.AutoBugBounty/media/路径收集+XSS.json",
     "BugBountyCVE/9.AutoBugBounty/media/资产匹配推送.json",
     "BugBountyCVE/9.AutoBugBounty/media/子域名+资产收集.json",
     "BugBountyCVE/9.AutoBugBounty/media/FoFa.json",
     "BugBountyCVE/9.AutoBugBounty/media/RSS.json",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/0.基础.md",
-    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media/Pasted image 20251119162236.png",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/media",
     "全栈代码审计/Java/4.安全研究/2.身份验证绕过/资源.md",
     "全栈代码审计/Java/4.安全研究/0.安全基础/1.反射.md",
