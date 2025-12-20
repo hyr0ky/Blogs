@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RedTeam⚔️/7.云/0.云安全基本概念.md",
+                "file": "RedTeam⚔️/7.云/1.公有云攻防.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.云安全基本概念"
+              "title": "1.公有云攻防"
             }
           }
         ],
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RedTeam⚔️/7.云/0.云安全基本概念.md",
+                "file": "区块链安全💱/1,智能合约安全/1.认识合约审计.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0.云安全基本概念 的大纲"
+              "title": "1.认识合约审计 的大纲"
             }
           },
           {
@@ -195,10 +195,13 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "881acb3e561cb818",
+  "active": "ee2e50022e19ca00",
   "lastOpenFiles": [
-    "RedTeam⚔️/7.云/1.公有云攻防.md",
+    "RedTeam⚔️/7.云/media/Pasted image 20251220164110.png",
+    "区块链安全💱/1,智能合约安全/1.认识合约审计.md",
     "RedTeam⚔️/7.云/0.云安全基本概念.md",
+    "区块链安全💱/1,智能合约安全/未命名.md",
+    "RedTeam⚔️/7.云/1.公有云攻防.md",
     "RedTeam⚔️/7.云/3.Kubernetes攻防.md",
     "RedTeam⚔️/7.云/2.Docker攻防.md",
     "RedTeam⚔️/7.云/未命名.base",
@@ -231,8 +234,6 @@
     "杂/test.md",
     "杂/1.Docker常见问题汇总.md",
     "杂/未命名.md",
-    "安全开发💻/Okr/年度OKR.md",
-    "安全开发💻/Okr/韩.md",
     "杂/media/Pasted image 20251213183707.png",
     "杂/media/Pasted image 20251213183420.png",
     "杂/media/Pasted image 20251213183223.png",
