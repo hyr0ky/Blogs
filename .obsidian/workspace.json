@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RedTeam⚔️/7.云/2.Docker攻防.md",
+                "file": "SUMMARY.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.Docker攻防"
+              "title": "SUMMARY"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -142,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RedTeam⚔️/7.云/2.Docker攻防.md",
+                "file": "SUMMARY.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.Docker攻防 的大纲"
+              "title": "SUMMARY 的大纲"
             }
           },
           {
@@ -183,11 +182,13 @@
   },
   "active": "ee2e50022e19ca00",
   "lastOpenFiles": [
+    "RedTeam⚔️/7.云/2.Docker攻防.md",
+    "SUMMARY.md",
+    "RedTeam⚔️/7.云/未命名.md",
     "RedTeam⚔️/7.云/media/Pasted image 20260109193023.png",
     "RedTeam⚔️/7.云/media/Pasted image 20260109191345.png",
     "RedTeam⚔️/7.云/1.公有云攻防.md",
     "RedTeam⚔️/7.云/0.云安全基本概念.md",
-    "RedTeam⚔️/7.云/2.Docker攻防.md",
     "AI安全🤖/微调&杂项/1.Agent Skills.md",
     "BugBountyCVE/10.文章翻译/3.客户端漏洞挖掘.md",
     "AI安全🤖/微调&杂项/media/Pasted image 20260108005432.png",
@@ -223,9 +224,7 @@
     "RedTeam⚔️/1.打点",
     "杂/0.抖音小火人生成.md",
     "杂/media/Pasted image 20251214211130.png",
-    "杂/黑苹果.md",
     "杂/media/Pasted image 20251213183707.png",
-    "杂/media/Pasted image 20251213183420.png",
     "区块链安全💱/0.基础知识/Solidity/未命名",
     "区块链安全💱/0.基础知识/Solidity",
     "杂/media"
