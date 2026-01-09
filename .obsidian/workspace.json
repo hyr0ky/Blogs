@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f372037950b1788e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BugBountyCVE/10.文章翻译/3.客户端漏洞挖掘.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.客户端漏洞挖掘"
-            }
-          },
-          {
             "id": "ee2e50022e19ca00",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RedTeam⚔️/7.云/1.公有云攻防.md",
+                "file": "RedTeam⚔️/7.云/2.Docker攻防.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.公有云攻防"
+              "title": "2.Docker攻防"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -156,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "区块链安全💱/1,智能合约安全/1.认识合约审计.md",
+                "file": "RedTeam⚔️/7.云/2.Docker攻防.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.认识合约审计 的大纲"
+              "title": "2.Docker攻防 的大纲"
             }
           },
           {
@@ -197,13 +183,22 @@
   },
   "active": "ee2e50022e19ca00",
   "lastOpenFiles": [
+    "RedTeam⚔️/7.云/media/Pasted image 20260109193023.png",
+    "RedTeam⚔️/7.云/media/Pasted image 20260109191345.png",
+    "RedTeam⚔️/7.云/1.公有云攻防.md",
+    "RedTeam⚔️/7.云/0.云安全基本概念.md",
+    "RedTeam⚔️/7.云/2.Docker攻防.md",
+    "AI安全🤖/微调&杂项/1.Agent Skills.md",
+    "BugBountyCVE/10.文章翻译/3.客户端漏洞挖掘.md",
+    "AI安全🤖/微调&杂项/media/Pasted image 20260108005432.png",
+    "AI安全🤖/微调&杂项/media",
+    "AI安全🤖/AI&安全/0.基础知识.md",
+    "杂/本科毕业论文.md",
+    "杂/毕业论文 -- 智能合约源代码混淆技术.md",
     "RedTeam⚔️/7.云/media/Pasted image 20251220164110.png",
     "区块链安全💱/1,智能合约安全/1.认识合约审计.md",
-    "RedTeam⚔️/7.云/0.云安全基本概念.md",
     "区块链安全💱/1,智能合约安全/未命名.md",
-    "RedTeam⚔️/7.云/1.公有云攻防.md",
     "RedTeam⚔️/7.云/3.Kubernetes攻防.md",
-    "RedTeam⚔️/7.云/2.Docker攻防.md",
     "RedTeam⚔️/7.云/未命名.base",
     "RedTeam⚔️/7.云/media/Pasted image 20251218153133.png",
     "RedTeam⚔️/7.云/media/Pasted image 20251218152926.png",
@@ -228,20 +223,11 @@
     "RedTeam⚔️/1.打点",
     "杂/0.抖音小火人生成.md",
     "杂/media/Pasted image 20251214211130.png",
-    "杂/本科毕业论文.md",
-    "杂/毕业论文 -- 智能合约源代码混淆技术.md",
     "杂/黑苹果.md",
-    "杂/test.md",
-    "杂/1.Docker常见问题汇总.md",
-    "杂/未命名.md",
     "杂/media/Pasted image 20251213183707.png",
     "杂/media/Pasted image 20251213183420.png",
-    "杂/media/Pasted image 20251213183223.png",
-    "杂/media/9721c66afddc046ca140a721cc13226c.png",
-    "杂/media/Pasted image 20251213182727.png",
     "区块链安全💱/0.基础知识/Solidity/未命名",
     "区块链安全💱/0.基础知识/Solidity",
-    "杂/media",
-    "安全研究/未命名"
+    "杂/media"
   ]
 }
