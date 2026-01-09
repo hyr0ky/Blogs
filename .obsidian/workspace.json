@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RedTeam⚔️/7.云/2.Docker攻防.md",
+                "file": "Summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.Docker攻防"
+              "title": "Summary"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -141,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RedTeam⚔️/7.云/2.Docker攻防.md",
+                "file": "Summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.Docker攻防 的大纲"
+              "title": "Summary 的大纲"
             }
           },
           {
@@ -180,10 +181,11 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "ee2e50022e19ca00",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "SUMMARY.md",
     "RedTeam⚔️/7.云/2.Docker攻防.md",
+    "Summary.md",
+    "SUMMARY.md",
     "RedTeam⚔️/7.云/未命名.md",
     "RedTeam⚔️/7.云/media/Pasted image 20260109193023.png",
     "RedTeam⚔️/7.云/media/Pasted image 20260109191345.png",
@@ -222,7 +224,6 @@
     "RedTeam⚔️/1.打点/0.Woodpecker插件编写.md",
     "RedTeam⚔️/1.打点/0.Woodpecker插件编写.md",
     "RedTeam⚔️/1.打点",
-    "杂/0.抖音小火人生成.md",
     "杂/media/Pasted image 20251214211130.png",
     "杂/media/Pasted image 20251213183707.png",
     "区块链安全💱/0.基础知识/Solidity/未命名",
