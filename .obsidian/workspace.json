@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SUMMARY.md",
+                "file": "SUMMAR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SUMMARY"
+              "title": "SUMMAR"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SUMMARY.md",
+                "file": "SUMMAR.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "SUMMARY 的大纲"
+              "title": "SUMMAR 的大纲"
             }
           },
           {
@@ -183,7 +183,7 @@
   "active": "881acb3e561cb818",
   "lastOpenFiles": [
     "SUMMARY1.md",
-    "SUMMARY.md",
+    "SUMMAR.md",
     "RedTeam⚔️/7.云/2.Docker攻防.md",
     "RedTeam⚔️/7.云/未命名.md",
     "RedTeam⚔️/7.云/media/Pasted image 20260109193023.png",
