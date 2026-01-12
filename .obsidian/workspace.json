@@ -11,10 +11,14 @@
             "id": "ee2e50022e19ca00",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "交易系统💴/政策性/0.十五五规划.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "0.十五五规划"
             }
           }
         ]
@@ -137,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SUMMARY.md",
+                "file": "交易系统💴/政策性/0.十五五规划.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "SUMMARY 的大纲"
+              "title": "0.十五五规划 的大纲"
             }
           },
           {
@@ -176,10 +180,19 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "460a6ac6fb4eeea3",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "SUMMARY1.md",
+    "交易系统💴/政策性/media/Pasted image 20260112145741.png",
+    "交易系统💴/政策性/media/Pasted image 20260112145513.png",
+    "交易系统💴/政策性/media/Pasted image 20260112145445.png",
+    "交易系统💴/政策性/media/Pasted image 20260112145431.png",
+    "交易系统💴/政策性/media/Pasted image 20260112145114.png",
+    "交易系统💴/政策性/media/Pasted image 20260112144709.png",
+    "交易系统💴/政策性/media",
+    "交易系统💴/政策性/0.十五五规划.md",
+    "交易系统💴/政策性",
     "SUMMARY.md",
+    "SUMMARY1.md",
     "RedTeam⚔️/7.云/2.Docker攻防.md",
     "RedTeam⚔️/7.云/未命名.md",
     "RedTeam⚔️/7.云/media/Pasted image 20260109193023.png",
@@ -199,9 +212,6 @@
     "RedTeam⚔️/7.云/3.Kubernetes攻防.md",
     "RedTeam⚔️/7.云/未命名.base",
     "RedTeam⚔️/7.云/media/Pasted image 20251218153133.png",
-    "RedTeam⚔️/7.云/media/Pasted image 20251218152926.png",
-    "RedTeam⚔️/7.云/media/Pasted image 20251218152802.png",
-    "RedTeam⚔️/7.云/media/Pasted image 20251218152614.png",
     "RedTeam⚔️/7.云/media",
     "RedTeam⚔️/3.内网渗透/1.外网打点.md",
     "RedTeam⚔️/Nmap.md",
@@ -216,12 +226,7 @@
     "RedTeam⚔️/3.内网渗透/0.多级代理/0.多级代理.md",
     "RedTeam⚔️/3.内网渗透/0.多级代理",
     "RedTeam⚔️/1.打点/1.Dnslog与请求框架.md",
-    "RedTeam⚔️/1.打点/0.Woodpecker插件编写.md",
     "RedTeam⚔️/1.打点",
-    "杂/media/Pasted image 20251214211130.png",
-    "杂/media/Pasted image 20251213183707.png",
-    "区块链安全💱/0.基础知识/Solidity/未命名",
-    "区块链安全💱/0.基础知识/Solidity",
-    "杂/media"
+    "区块链安全💱/0.基础知识/Solidity/未命名"
   ]
 }
