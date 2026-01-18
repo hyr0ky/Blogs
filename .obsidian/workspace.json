@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a538556e56635607",
+        "id": "9af1bda8ecd6eb25",
         "type": "tabs",
         "children": [
           {
-            "id": "b89afac157082e47",
+            "id": "4493d730cb70f7ea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RedTeam⚔️/3.内网渗透/0.多级代理/0.多级代理.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "0.多级代理"
+              "title": "新标签页"
             }
           }
         ]
@@ -78,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -142,13 +137,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RedTeam⚔️/3.内网渗透/0.多级代理/0.多级代理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0.多级代理 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -179,56 +173,57 @@
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false,
       "random-note:开始漫游笔记": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "b89afac157082e47",
+  "active": "4493d730cb70f7ea",
   "lastOpenFiles": [
+    "RedTeam⚔️/1.打点&工具开发/1.Dnslog与请求框架.md",
+    "RedTeam⚔️/1.打点&工具开发/0.Woodpecker插件编写.md",
+    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116212022.png",
+    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116211904.png",
+    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116175658.png",
+    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116175258.png",
+    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116171413.png",
+    "RedTeam⚔️/1.打点&工具开发/media",
+    "RedTeam⚔️/9.靶机/春秋云镜/0.Delivery.md",
+    "RedTeam⚔️/Nmap.md",
+    "BugBountyCVE/10.文章翻译/0.交易所--身份验证和客户端错误.md",
+    "README.md",
+    "RedTeam⚔️/3.内网渗透/1.基础工具/4.MSF-CS - Tips.md",
+    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194619.png",
+    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194545.png",
+    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194443.png",
+    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194102.png",
+    "RedTeam⚔️/3.内网渗透/1.基础工具/1.MSF--常用.md",
+    "RedTeam⚔️/3.内网渗透/1.基础工具/3.远控开发.md",
+    "RedTeam⚔️/1.打点&工具开发/2.扫描器开发.md",
+    "RedTeam⚔️/3.内网渗透/4.漏洞利用/1.Confluence.md",
+    "RedTeam⚔️/3.内网渗透/4.漏洞利用/0.vCenter.md",
+    "BugBountyCVE/Demo.md",
+    "BugBountyCVE/Next.js/CVE-2024-34351.md",
+    "RedTeam⚔️/10.漏洞复现和利用/1.Confluence.md",
+    "RedTeam⚔️/10.漏洞复现和利用/0.vCenter.md",
+    "RedTeam⚔️/10.漏洞复现和利用",
+    "全栈代码审计/Java/4.安全研究/1.反序列化/1.CC链分析.md",
+    "全栈代码审计/Java/0.Java基础/8.RMI基础.md",
+    "全栈代码审计/Java/0.Java基础/9.JDNI基础.md",
+    "RedTeam⚔️/3.内网渗透/0.多级代理/0.多级代理.md",
     "RedTeam⚔️/6.免杀/0.免杀总纲.md",
     "RedTeam⚔️/6.免杀/1.代码基础.md",
     "RedTeam⚔️/6.免杀/2.shellcode基础.md",
     "RedTeam⚔️/6.免杀/3.代码上的免杀.md",
     "RedTeam⚔️/6.免杀/4.人工层面的免杀.md",
-    "RedTeam⚔️/6.免杀/5.非PE结构的免杀.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/3.远控开发.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/1.MSF--常用.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/2.CS -- 常用.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/0.Webshell管理工具.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/1.MSF/2.MSF后渗透.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/1.MSF/1.MSF实战攻击.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/1.MSF/0.Msf安装与升级.md",
-    "Excalidraw/多级代理.excalidraw.md",
-    "Excalidraw/Drawing 2026-01-13 15.33.45.excalidraw.md",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/0.多级代理.md",
     "RedTeam⚔️/3.内网渗透/0.多级代理/media/Pasted image 20260113154151.png",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/media/Pasted image 20260113154121.png",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/media/Pasted image 20260113154019.png",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/media/Pasted image 20260113153401.png",
     "Excalidraw",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/media/Pasted image 20260113144706.png",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/media/Pasted image 20260113144110.png",
     "RedTeam⚔️/3.内网渗透/0.多级代理/media",
-    "全栈代码审计/Java/1.快速代码审计/10.鉴权绕过.md",
-    "全栈代码审计/Java/7.ASM/0.ASM资源.md",
-    "全栈代码审计/Java/6.Tabby/2.基础语法.md",
-    "全栈代码审计/Java/6.Tabby/1.配置规则.md",
-    "全栈代码审计/Java/6.Tabby/0.环境搭建.md",
-    "全栈代码审计/Java/5.CodeQl/7.常用规则.md",
-    "全栈代码审计/Java/4.安全研究/3.内存马/0.大纲.md",
-    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/资源.md",
-    "全栈代码审计/Java/4.安全研究/2.身份验证绕过/0.基础.md",
-    "全栈代码审计/Java/4.安全研究/1.反序列化/11.JDK原生反序列化.md",
     "RedTeam⚔️/9.靶机/春秋云镜",
-    "交易系统💴/政策性/media/Pasted image 20260112145741.png",
-    "交易系统💴/政策性/media/Pasted image 20260112145513.png",
-    "交易系统💴/政策性/media/Pasted image 20260112145445.png",
-    "交易系统💴/政策性/media/Pasted image 20260112145431.png",
     "交易系统💴/政策性/media",
     "交易系统💴/政策性",
     "AI安全🤖/微调&杂项/media",
     "RedTeam⚔️/7.云/未命名.base",
-    "RedTeam⚔️/7.云/media",
-    "RedTeam⚔️/7.云",
-    "RedTeam⚔️/3.内网渗透/4.漏洞利用"
+    "RedTeam⚔️/7.云/media"
   ]
 }

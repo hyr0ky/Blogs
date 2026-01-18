@@ -1,5 +1,6 @@
 {
-  "baseFontSize": 10,
+  "baseFontSize": 15,
   "baseFontSizeAction": true,
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "cssTheme": "Underwater"
 }
