@@ -195,3 +195,6 @@ contract MyToken is ERC20 {
     - 使用 `_mint(msg.sender, initialSupply)` 向部署者分配初始代币
     - 可根据需求修改铸造地址（如 DAO 多签钱包）
 
+
+
+- https://www.cnblogs.com/WZM1230/p/18622766#%E5%8F%8D%E7%BC%96%E8%AF%91

@@ -1,5 +1,9 @@
 [
   "obsidian-git",
   "auto-card-link",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "obsidian-kanban",
+  "pomodoro-timer",
+  "calendar",
+  "obsidian-reminder-plugin"
 ]

@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9af1bda8ecd6eb25",
+        "id": "eebe80fe6de7829b",
         "type": "tabs",
         "children": [
           {
-            "id": "4493d730cb70f7ea",
+            "id": "3ac0e1cf08ae702c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "README"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"全栈代码审计/\" ",
+                "query": "remote sink",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 251.50433349609375
   },
   "right": {
     "id": "d3292a4c707f7ae5",
@@ -137,12 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "README 的大纲"
             }
           },
           {
@@ -154,6 +159,26 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "7111dc98aa5dd650",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "c39198fa0d072e52",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {},
+              "icon": "clock",
+              "title": "Reminders"
+            }
           }
         ],
         "currentTab": 4
@@ -164,9 +189,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
@@ -174,56 +197,58 @@
       "obsidian-git:Open Git source control": false,
       "random-note:开始漫游笔记": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "obsidian-day-planner:Open Timeline": false,
-      "obsidian-day-planner:Open Multi-Day View": false
+      "workspaces:管理工作区布局": false,
+      "obsidian-kanban:创建新看板": false,
+      "pomodoro-timer:Toggle timer panel": false
     }
   },
-  "active": "4493d730cb70f7ea",
+  "active": "881acb3e561cb818",
   "lastOpenFiles": [
-    "RedTeam⚔️/1.打点&工具开发/1.Dnslog与请求框架.md",
-    "RedTeam⚔️/1.打点&工具开发/0.Woodpecker插件编写.md",
-    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116212022.png",
-    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116211904.png",
-    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116175658.png",
-    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116175258.png",
-    "RedTeam⚔️/1.打点&工具开发/media/Pasted image 20260116171413.png",
-    "RedTeam⚔️/1.打点&工具开发/media",
-    "RedTeam⚔️/9.靶机/春秋云镜/0.Delivery.md",
-    "RedTeam⚔️/Nmap.md",
-    "BugBountyCVE/10.文章翻译/0.交易所--身份验证和客户端错误.md",
-    "README.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/4.MSF-CS - Tips.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194619.png",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194545.png",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194443.png",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/media/Pasted image 20260114194102.png",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/1.MSF--常用.md",
-    "RedTeam⚔️/3.内网渗透/1.基础工具/3.远控开发.md",
-    "RedTeam⚔️/1.打点&工具开发/2.扫描器开发.md",
-    "RedTeam⚔️/3.内网渗透/4.漏洞利用/1.Confluence.md",
-    "RedTeam⚔️/3.内网渗透/4.漏洞利用/0.vCenter.md",
+    "全栈代码审计/Python/Codeql/2.数据流分析.md",
+    "全栈代码审计/Python/Codeql/1.CodeQL Python库.md",
+    "全栈代码审计/Java/5.CodeQl/3.Codeql寻找JavaSec漏洞.md",
+    "全栈代码审计/Java/5.CodeQl/5.挖掘Fastjson新的利用链.md",
+    "全栈代码审计/Java/5.CodeQl/4.学习优秀文章.md",
+    "全栈代码审计/Python/CVE/CVE-2024-41955.md",
+    "全栈代码审计/Python/Codeql/0.资源.md",
+    "全栈代码审计/Python/Codeql",
     "BugBountyCVE/Demo.md",
-    "BugBountyCVE/Next.js/CVE-2024-34351.md",
-    "RedTeam⚔️/10.漏洞复现和利用/1.Confluence.md",
-    "RedTeam⚔️/10.漏洞复现和利用/0.vCenter.md",
-    "RedTeam⚔️/10.漏洞复现和利用",
-    "全栈代码审计/Java/4.安全研究/1.反序列化/1.CC链分析.md",
-    "全栈代码审计/Java/0.Java基础/8.RMI基础.md",
-    "全栈代码审计/Java/0.Java基础/9.JDNI基础.md",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/0.多级代理.md",
-    "RedTeam⚔️/6.免杀/0.免杀总纲.md",
-    "RedTeam⚔️/6.免杀/1.代码基础.md",
-    "RedTeam⚔️/6.免杀/2.shellcode基础.md",
-    "RedTeam⚔️/6.免杀/3.代码上的免杀.md",
-    "RedTeam⚔️/6.免杀/4.人工层面的免杀.md",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/media/Pasted image 20260113154151.png",
-    "Excalidraw",
-    "RedTeam⚔️/3.内网渗透/0.多级代理/media",
-    "RedTeam⚔️/9.靶机/春秋云镜",
-    "交易系统💴/政策性/media",
-    "交易系统💴/政策性",
-    "AI安全🤖/微调&杂项/media",
-    "RedTeam⚔️/7.云/未命名.base",
-    "RedTeam⚔️/7.云/media"
+    "全栈代码审计/Python/CVE/CVE-2026-21892.md",
+    "全栈代码审计/Python/基础/6.RCE.md",
+    "全栈代码审计/Python/基础/media/Pasted image 20260304015506.png",
+    "全栈代码审计/Python/基础/0.密码学.md",
+    "全栈代码审计/Python/基础/1.SSRF.md",
+    "全栈代码审计/Python/基础/2.反序列化.md",
+    "全栈代码审计/Python/基础/3.路径遍历.md",
+    "全栈代码审计/Python/基础/4.SQL注入.md",
+    "全栈代码审计/Python/基础/5.流量拦截.md",
+    "全栈代码审计/Python/基础/media/Pasted image 20260304010656.png",
+    "全栈代码审计/Python/基础/media/Pasted image 20260304005337.png",
+    "全栈代码审计/Python/基础/media/Pasted image 20260304005254.png",
+    "全栈代码审计/Python/基础/media/Pasted image 20260304003339.png",
+    "全栈代码审计/Python/基础/media/Pasted image 20260304003250.png",
+    "全栈代码审计/Python/基础/media",
+    "全栈代码审计/基础/6.Tools.md",
+    "全栈代码审计/Js/Pdf.js cve-2024-4367.md",
+    "全栈代码审计/Python/基础",
+    "全栈代码审计/Net",
+    "全栈代码审计/Javascript/CVE/CVE-2025-62508.md",
+    "全栈代码审计/Python/CVE",
+    "全栈代码审计/Python",
+    "全栈代码审计/Java/基础/2.反序列化.md",
+    "全栈代码审计/Javascript/CVE",
+    "全栈代码审计/Javascript",
+    "全栈代码审计/Java/基础/1.XXE.md",
+    "全栈代码审计/Java/基础/media/Pasted image 20260303024326.png",
+    "全栈代码审计/Java/基础/media",
+    "全栈代码审计/Java/基础/0.密码学.md",
+    "全栈代码审计/GO/基础/0.目录遍历.md",
+    "全栈代码审计/Java/基础",
+    "全栈代码审计/基础/5.测试代码段.md",
+    "全栈代码审计/基础/media/Pasted image 20260303005124.png",
+    "全栈代码审计/基础/media/Pasted image 20260303004901.png",
+    "全栈代码审计/基础/media/Pasted image 20260303004816.png",
+    "全栈代码审计/基础/4.REPL.md",
+    "全栈代码审计/基础/3.过滤和转义.md"
   ]
 }
